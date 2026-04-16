@@ -51,6 +51,12 @@ def scrape(stu_id:str, password:str) -> list:
 
     time.sleep(2)  # ログイン待機
 
+    # ログイン失敗チェック（ログインフォームがまだ存在する場合は失敗）
+    login_form = driver.find_elements(By.XPATH, "//*[@id='loginButton']")
+    if login_form:
+        driver.close()
+        raise ValueError("学籍番号またはパスワードが正しくありません。")
+
     # My時間割ページに直接アクセス（動いていた方法）
     print("My時間割ページにアクセス中...")
     timetable_url = "https://muscat.musashino-u.ac.jp/portal/prtlmjkr.do?clearAccessData=true&contenam=prtlmjkr&kjnmnNo=15"
