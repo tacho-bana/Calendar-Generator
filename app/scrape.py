@@ -118,56 +118,42 @@ def scrape(stu_id:str, password:str) -> list:
                 item_cells = driver.find_elements(By.XPATH, "//table[contains(@class, 'jikanwari_table')]//tr[contains(@class, 'rule_')]//td[@class='item']")
                 print(f"デバッグ情報 - 時間割テーブル: {len(time_table_exists)}個, rule行: {len(rule_rows)}個, itemセル: {len(item_cells)}個")
             
-            if len(all_cells) >= 42:  # 7限 x 6曜日 = 42セル以上期待
-                # 1限から7限まで処理
-                for period in range(7):  # 7限まで対応
-                    period_row = []
-                    # 月曜日から土曜日まで
-                    for day in range(6):
-                        cell_idx = period * 6 + day
-                        if cell_idx < len(all_cells):
-                            cell = all_cells[cell_idx]
-                            cell_html = cell.get_attribute("innerHTML")
-                            cell_text = cell.text.strip()
-                            
-                            # 空のセルをチェック
-                            if ("時間割情報が存在しない" in cell_html or 
-                                "<br><br><br>" in cell_html or 
+            # 1限から7限まで処理（セル数に関わらず取得）
+            for period in range(7):
+                period_row = []
+                for day in range(6):
+                    cell_idx = period * 6 + day
+                    if cell_idx < len(all_cells):
+                        cell = all_cells[cell_idx]
+                        cell_html = cell.get_attribute("innerHTML")
+                        cell_text = cell.text.strip()
+                        if ("時間割情報が存在しない" in cell_html or
+                                "<br><br><br>" in cell_html or
                                 not cell_text):
-                                period_row.append("")
-                            else:
-                                period_row.append(cell_text)
-                                
-                            if semester_idx == 0 and period < 2:  # デバッグ出力
-                                print(f"セル[{period+1}限,{day+1}曜日]: {'データあり' if cell_text else '空'}")
-                        else:
                             period_row.append("")
-                    
-                    semester_data.append(period_row)
-                
-                # 曜日ごとに再編成（working versionと互換性のため）
-                reorganized_data = []
-                for day in range(6):  # 月〜土
-                    day_schedule = []
-                    for period in range(7):  # 1-7限
-                        if period < len(semester_data) and day < len(semester_data[period]):
-                            day_schedule.append(semester_data[period][day])
                         else:
-                            day_schedule.append("")
-                    reorganized_data.append(day_schedule)
-                
-                # 日曜日も追加（通常は空）
-                reorganized_data.append([""] * 7)  # 7限分
-                
-                jikanwari.append(reorganized_data)
-                course_count = len([item for sublist in reorganized_data for item in sublist if item])
-                print(f"学期 {semester_idx + 1} 完了 - {course_count} 個の授業データを取得")
-                
-            else:
-                print(f"学期 {semester_idx + 1}: セル数が不足 ({len(all_cells)}個)")
-                # 空のデータで埋める（7限対応）
-                empty_semester = [[""] * 7 for _ in range(7)]  # 7曜日 x 7限
-                jikanwari.append(empty_semester)
+                            period_row.append(cell_text)
+                    else:
+                        period_row.append("")
+                semester_data.append(period_row)
+
+            # 曜日ごとに再編成
+            reorganized_data = []
+            for day in range(6):  # 月〜土
+                day_schedule = []
+                for period in range(7):
+                    if period < len(semester_data) and day < len(semester_data[period]):
+                        day_schedule.append(semester_data[period][day])
+                    else:
+                        day_schedule.append("")
+                reorganized_data.append(day_schedule)
+
+            # 日曜日も追加（通常は空）
+            reorganized_data.append([""] * 7)
+
+            jikanwari.append(reorganized_data)
+            course_count = len([item for sublist in reorganized_data for item in sublist if item])
+            print(f"学期 {semester_idx + 1} 完了 - {len(all_cells)}セル, {course_count}個の授業データを取得")
                 
         except Exception as e:
             print(f"学期 {semester_idx + 1} でエラー発生: {str(e)}")
