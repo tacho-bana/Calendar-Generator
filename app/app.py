@@ -21,11 +21,7 @@ def main():
         with st.spinner('カレンダー取得中'):
 
             # 時間割の取得
-            try:
-                jikanwari = scrape(str(stu_id), password)
-            except ValueError as e:
-                st.error(str(e))
-                st.stop()
+            jikanwari = scrape(str(stu_id), password)
             
             # 取得した時間割データを表示
             st.subheader("📅 取得した時間割データ")
