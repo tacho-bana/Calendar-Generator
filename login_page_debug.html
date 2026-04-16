@@ -1,0 +1,5969 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="ja">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="format-detection" content="telephone=no">
+    <title>
+    
+    
+      武蔵野大学 MUSCAT
+    
+    </title>
+
+
+    <script>
+      var waitingMessage = "お待ちください...";
+      var showBlockAlartMessage = "処理中です。しばらくお待ちください。";
+      var ajaxRequestError = "エラーが発生しました";
+      var addListenerError = "お使いのブラウザは対応していません。";
+      var noFoundResourceError = "存在しないファイルが指定されています。指定し直して下さい。";
+    </script>
+
+    <link rel="stylesheet" href="./css/timepicker.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./css/jquery.ui.css" type="text/css" charset="utf-8"> 
+    <link rel="stylesheet" href="./css/design01/common.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="./css/design01/theme.css" type="text/css" media="screen" charset="utf-8">
+    <!--<link rel="stylesheet" href="./css/design01/common_en.css" type="text/css" media="screen" charset="utf-8" />-->
+    <!--<link rel="stylesheet" href="./css/design01/theme_en.css" type="text/css" media="screen" charset="utf-8" />-->
+    <link rel="stylesheet" href="./css/design01/common_print.css" type="text/css" media="print" charset="utf-8">
+    <link rel="stylesheet" href="./css/design01/theme_print.css" type="text/css" media="print" charset="utf-8">
+    <!--<link rel="stylesheet" href="./css/design01/theme_print_en.css" type="text/css" media="print" charset="utf-8" />-->
+    <link rel="shortcut icon" href="./img/design01/favicon.ico">
+
+    <script language="JavaScript" type="text/JavaScript" src="./js/prototype.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/effects.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/main.js"></script>
+<!--[if IE]>
+    
+    <script language="JavaScript" type="text/JavaScript" src="./js/excanvas.js"></script>
+<![endif]-->
+
+    <script language="JavaScript" type="text/JavaScript" src="./js/jquery.js"></script>
+    <script type="text/javascript">jQuery.noConflict();var jq$ = jQuery;</script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/jquery.ui.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/date.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/design01/common.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/design01/theme.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/jquery.ui.datepicker-ja.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/jquery.timePicker.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/jquery.blockUI.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/main_jq.js"></script>
+    <script language="javascript" type="text/javascript">
+    <!--
+      restoreScreenState('', '', '');
+      
+      
+    //-->
+    </script>
+
+  </head>
+
+<body style="">
+<div id="container">
+<div id="header">
+  
+  
+  <div id="head_top"></div>
+  <div id="head_left"></div>
+  <div id="head_right">
+    <div class="button">
+      
+      <input name="f_large" type="button" id="f_large">
+      <input name="f_middle" type="button" id="f_middle">
+      <input name="f_small" type="button" id="f_small">
+      
+      
+        <span id="help_space"> </span>
+        
+        
+        
+        
+          <form name="logoutForm" method="post" action="/portal/logout.do">
+            <input name="logout" type="button" id="logout" onclick="return logoutCheck('ログアウトしますか？');">
+          </form>
+        
+      
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div id="head_base"></div>
+  
+  <div id="top_menu">
+    <ul id="nav">
+
+      
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <li><a href="tab.do?buttonName=changeTab&amp;menulv1=0000000001"><span class="bkimg">お知らせ</span></a>
+      <ul id="menu_list">
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="受信メッセージ検索" href="
+                wbasmgjr.do?clearAccessData=true&amp;contenam=wbasmgjr&amp;kjnmnNo=154
+                ">受信メッセージ検索
+              </a>
+            
+
+            
+            
+          </li>
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="講義情報検索" href="
+                prtlkkir.do?clearAccessData=true&amp;contenam=prtlkkir&amp;kjnmnNo=159
+                ">講義情報検索
+              </a>
+            
+
+            
+            
+          </li>
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="インフォメーション一覧" href="
+                wbaskosr.do?clearAccessData=true&amp;contenam=wbaskosr&amp;kjnmnNo=119
+                ">インフォメーション一覧
+              </a>
+            
+
+            
+            
+          </li>
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="イベント" href="
+                wbasevtr.do?clearAccessData=true&amp;contenam=wbasevtr&amp;kjnmnNo=137
+                ">イベント
+              </a>
+            
+
+            
+            
+          </li>
+        
+      
+      </ul>
+    </li>
+  
+    <li><a href="tab.do?buttonName=changeTab&amp;menulv1=0000000002"><span class="bkimg">授業</span></a>
+      <ul id="menu_list">
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="My時間割" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000002&amp;menuIndex=0&amp;contenam=prtlmjkr&amp;kjnmnNo=15
+                ">My時間割
+              </a>
+            
+          </li>
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="出席確認" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000002&amp;menuIndex=1&amp;contenam=ssekkknr&amp;kjnmnNo=95
+                ">出席確認
+              </a>
+            
+          </li>
+        
+      
+        
+        
+          
+          
+          <li>
+            <a style="padding-left:15px;padding-right:15px" href="
+              /portal/linkmenuforward.do?ext=1&amp;linkUrl=https%3a%2f%2fcp.musashino-u.ac.jp%2flms%2flginLgir%2flogin" target="_blank" title="学修支援システム(CoursePower)">学修支援システム(CoursePower)
+            </a>
+          </li>
+          
+        
+
+        
+        
+      
+      </ul>
+    </li>
+  
+    <li><a href="tab.do?buttonName=changeTab&amp;menulv1=0000000003"><span class="bkimg">履修・成績</span></a>
+      <ul id="menu_list">
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="成績照会" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000003&amp;menuIndex=0&amp;contenam=wssrlstr&amp;kjnmnNo=181
+                ">成績照会
+              </a>
+            
+          </li>
+        
+      
+        
+        
+          
+          
+          <li>
+            <a style="padding-left:15px;padding-right:15px" href="
+              /portal/linkmenuforward.do?ext=1&amp;linkUrl=https%3a%2f%2fwww.musashino-u.ac.jp%2fstudent-life%2flearning%2fcourse.html" target="_blank" title="履修案内（大学HP）">履修案内（大学HP）
+            </a>
+          </li>
+          
+        
+
+        
+        
+      
+      </ul>
+    </li>
+  
+    <li><a href="tab.do?buttonName=changeTab&amp;menulv1=0000000004"><span class="bkimg">シラバス</span></a>
+      <ul id="menu_list">
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="シラバス検索" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000004&amp;menuIndex=0&amp;contenam=slbssrch&amp;kjnmnNo=39
+                ">シラバス検索
+              </a>
+            
+          </li>
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="教員で検索" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000004&amp;menuIndex=1&amp;contenam=slbsskyr&amp;kjnmnNo=37
+                ">教員で検索
+              </a>
+            
+          </li>
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="講義で検索" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000004&amp;menuIndex=2&amp;contenam=slbsskgr&amp;kjnmnNo=35
+                ">講義で検索
+              </a>
+            
+          </li>
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="カリキュラムで検索" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000004&amp;menuIndex=3&amp;contenam=slbsscmr&amp;kjnmnNo=36
+                ">カリキュラムで検索
+              </a>
+            
+          </li>
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="全文検索" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000004&amp;menuIndex=4&amp;contenam=slbsskwr&amp;kjnmnNo=38
+                ">全文検索
+              </a>
+            
+          </li>
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="お気に入り" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000004&amp;menuIndex=5&amp;contenam=slbsfavr&amp;kjnmnNo=185
+                ">お気に入り
+              </a>
+            
+          </li>
+        
+      
+        
+        
+          
+          
+          <li>
+            <a style="padding-left:15px;padding-right:15px" href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fgomykits.kinokuniya.co.jp%2fmusashino%2f" target="_blank" title="MyKiTS">MyKiTS
+            </a>
+          </li>
+          
+        
+
+        
+        
+      
+      </ul>
+    </li>
+  
+    <li><a href="tab.do?buttonName=changeTab&amp;menulv1=0000000005"><span class="bkimg">学生支援</span></a>
+      <ul id="menu_list">
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="学生カルテ" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000005&amp;menuIndex=0&amp;contenam=chrtbase&amp;kjnmnNo=54
+                ">学生カルテ
+              </a>
+            
+          </li>
+        
+      
+        
+        
+          
+          
+          <li>
+            <a style="padding-left:15px;padding-right:15px" href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fwww.musashino-u.ac.jp%2fstudent-life%2fmuscat%2findex.html" target="_blank" title="学生生活ハンドブック">学生生活ハンドブック
+            </a>
+          </li>
+          
+        
+
+        
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="学外活動登録" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000005&amp;menuIndex=2&amp;contenam=rsykggku&amp;kjnmnNo=190
+                ">学外活動登録
+              </a>
+            
+          </li>
+        
+      
+      </ul>
+    </li>
+  
+    <li><a href="tab.do?buttonName=changeTab&amp;menulv1=0000000006"><span class="bkimg">就職・キャリア支援</span></a>
+      <ul id="menu_list">
+      
+        
+        
+          
+          
+          <li>
+            <a style="padding-left:15px;padding-right:15px" href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fwww.musashino-u.ac.jp%2fstudent-life%2fcareer%2f06.studentPage%2f" target="_blank" title="MUC（MU就活情報サイト）">MUC（MU就活情報サイト）
+            </a>
+          </li>
+          
+        
+
+        
+        
+      
+        
+        
+          
+          
+          <li>
+            <a style="padding-left:15px;padding-right:15px" href="
+              /portal/linkmenuforward.do?ext=1&amp;linkUrl=https%3a%2f%2fwww2.kyujin-navi.com%2fGAKUGAI%2flogin%2flogin.asp%3fmode%3dlogin" target="_blank" title="求人NAVI・キャリアアドバイザー相談予約">求人NAVI・キャリアアドバイザー相談予約
+            </a>
+          </li>
+          
+        
+
+        
+        
+      
+        
+        
+          
+          
+          <li>
+            <a style="padding-left:15px;padding-right:15px" href="
+              /portal/linkmenuforward.do?ext=1&amp;linkUrl=https%3a%2f%2fwww2.kyujin-navi.com%2fGAKUGAI%2flogin%2flogin.asp%3fmode%3dlogin" target="_blank" title="進路希望・求職登録">進路希望・求職登録
+            </a>
+          </li>
+          
+        
+
+        
+        
+      
+        
+        
+          
+          
+          <li>
+            <a style="padding-left:15px;padding-right:15px" href="
+              /portal/linkmenuforward.do?ext=1&amp;linkUrl=https%3a%2f%2fwww2.kyujin-navi.com%2fGAKUGAI%2flogin%2flogin.asp%3fmode%3dlogin" target="_blank" title="進路状況登録">進路状況登録
+            </a>
+          </li>
+          
+        
+
+        
+        
+      
+      </ul>
+    </li>
+  
+    <li><a href="tab.do?buttonName=changeTab&amp;menulv1=0000000007"><span class="bkimg">Myツール</span></a>
+      <ul id="menu_list">
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="教室・AV機器予約状況照会" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000007&amp;menuIndex=0&amp;contenam=sstwyjkr&amp;kjnmnNo=77
+                ">教室・AV機器予約状況照会
+              </a>
+            
+          </li>
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="電子キャビネット" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000007&amp;menuIndex=1&amp;contenam=prtlcabu&amp;kjnmnNo=139
+                ">電子キャビネット
+              </a>
+            
+          </li>
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="アンケート回答" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000007&amp;menuIndex=2&amp;contenam=sprtenqu&amp;kjnmnNo=80
+                ">アンケート回答
+              </a>
+            
+          </li>
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="アンケート結果照会" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000007&amp;menuIndex=3&amp;contenam=sprtenqr&amp;kjnmnNo=81
+                ">アンケート結果照会
+              </a>
+            
+          </li>
+        
+      
+      </ul>
+    </li>
+  
+    <li><a href="tab.do?buttonName=changeTab&amp;menulv1=0000000008"><span class="bkimg">個人設定</span></a>
+      <ul id="menu_list">
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="スケジュール登録" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000008&amp;menuIndex=0&amp;contenam=wbassdtu&amp;kjnmnNo=164
+                ">スケジュール登録
+              </a>
+            
+          </li>
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="メール転送設定" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000008&amp;menuIndex=1&amp;contenam=wbasmfwu&amp;kjnmnNo=145
+                ">メール転送設定
+              </a>
+            
+          </li>
+        
+      
+        
+        
+
+        
+        
+          <li>
+            
+            
+
+            
+            
+              <a style="padding-left:15px;padding-right:15px" title="ブックマーク登録" href="
+                top.do?buttonName=showContent&amp;menulv1=0000000008&amp;menuIndex=2&amp;contenam=wbasbkmu&amp;kjnmnNo=143
+                ">ブックマーク登録
+              </a>
+            
+          </li>
+        
+      
+      </ul>
+    </li>
+  
+    <li class="menu_end"><a href="tab.do?buttonName=changeTab&amp;menulv1=0000000009"><span class="bkimg">ICTサポート</span></a>
+      <ul id="menu_list">
+      
+        
+        
+          
+          
+          <li>
+            <a style="padding-left:15px;padding-right:15px" href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fwww.musashino-u.ac.jp%2fstudent-life%2flearning%2finfo_tech%2f" target="_blank" title="学内IT・ネットワーク環境情報">学内IT・ネットワーク環境情報
+            </a>
+          </li>
+          
+        
+
+        
+        
+      
+        
+        
+          
+          
+          <li>
+            <a style="padding-left:15px;padding-right:15px" href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fmusic-helpdesk.mubs.jp%2f" target="_blank" title="MUSICヘルプデスク">MUSICヘルプデスク
+            </a>
+          </li>
+          
+        
+
+        
+        
+      
+      </ul>
+    </li>
+  
+
+      
+      
+
+    </ul>
+    <br class="clear">
+  </div>
+</div>
+
+<div id="content">
+  <div id="login_inf_print">
+  <div class="top"></div>
+  <div class="mid">
+    
+    <ul class="user">
+      <li class="label">ログインユーザ ：</li>
+      <li class="item"> </li>
+      <li class="item">橘　由翔</li>
+    </ul>
+  
+  </div>
+  <div class="under"></div>
+</div><table cellpadding="0" cellspacing="0" summary="layout">
+    <tbody><tr>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+
+
+
+
+
+
+<td id="main" style="font-size: 1em;">
+
+
+
+
+  
+
+  
+  
+    
+    
+      
+      
+      <div class="portletArea">
+        
+        
+          
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div style="margin-top:-1em;"></div>
+
+
+      </div>
+      <br class="clear">
+    
+  
+    
+    
+  
+    
+    
+      
+      
+      <div>
+        
+        
+          
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.sdwrText {
+  overflow: hidden;
+  white-space:nowrap;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+    var wbassdwrRrequestURL = "wbassdwr.do";
+    var wbassdwrDesign = "design01";
+    var wbassdwrDialogTitle = "スケジュール登録";
+    var wbassdwrDetailJikan = "時間割参照";
+    var wbassdwrDetailSched = "スケジュール参照";
+    var isGstai = true;
+    if (isGstai.toString() != "false") {
+        isGstai = false;
+    }
+    var KOJINSCHEDULE_SCHEDULE = "1";
+
+    var weekStartDay = '2025/09/06';
+
+    // スケジュール登録ボタン押下時
+    function showSendlist() {
+
+      // フロートダイアログ初期化
+      clearDisp();
+      $("_kjnschkn").value = KOJINSCHEDULE_SCHEDULE;
+      var scrollValues = new Array(document.documentElement.scrollLeft, document.documentElement.scrollTop);
+      $("startday").value = weekStartDay;
+      $('groupBlock').hide();
+      $('timePlaceBlock').show();
+      $('koukaiKubunBlock').show();
+      $('todoBlock').hide();
+      $('groupMemberBlock').hide();
+      openFloatDialogWithScroll("#commentDialog", 900, wbassdwrDialogTitle, scrollValues);
+      jq$("#contentsForm").css("border-top","0pt");
+      jq$("#contentsForm").css("border-bottom","0pt");
+      jq$("#timePlaceForm").css("border-top","0pt");
+      if (isGstai) {
+          jq$("#timePlaceForm").css("border-bottom","0pt");
+      }
+      jq$("#koukaiKubunForm").css("border-top","0pt");
+    }
+
+    // 画面をクリアします。
+    function clearDisp() {
+      document.getElementById('fromtoRadioBtn').checked = true;
+      document.getElementById('titleText').value = '';
+      document.getElementById('naiyoText').value = '';
+      document.getElementById('date-pick1').value = '';
+      document.getElementById('time-pick1').value = '';
+      document.getElementById('date-pick2').value = '';
+      document.getElementById('time-pick2').value = '';
+      document.getElementById('date-pick-multi').value = '';
+      document.getElementById('time-pick3').value = '';
+      document.getElementById('time-pick4').value = '';
+      document.getElementById('placeText').value = '';
+      document.getElementById('timeall1').checked = false;
+      document.getElementById('timeall2').checked = false;
+      if (isGstai) {
+        document.getElementById('groupkokaiflgRadioBtn').checked = false;
+        document.getElementById('grouphikokaiflgRadioBtn').checked = true;
+      }
+      changeFromTo();
+      changeDateTime();
+      syjitflgCeckBoxMulti();
+      hideAllErrorMsg();
+    }
+
+    function hideAllErrorMsg() {
+        jq$("#requireTitle").hide();
+        jq$("#tooMuchTitleLength").hide();
+        jq$("#tooMuchNaiyoLength").hide();
+        jq$("#illegalDateRange").hide();
+        jq$("#illegalTimeRange").hide();
+        jq$("#requireStartDate").hide();
+        jq$("#irregularStartDate").hide();
+        jq$("#requireStartTime").hide();
+        jq$("#illegalTimeRange").hide();
+        jq$("#requireEndDate").hide();
+        jq$("#irregularEndDate").hide();
+        jq$("#requireEndTime").hide();
+        jq$("#requireMultiDate").hide();
+        jq$("#irregularMultiDate").hide();
+        jq$("#duplicateDateString").hide();
+        jq$("#duplicateMultiDate").hide();
+        jq$("#tooMuchPlaceLength").hide();
+    }
+
+    // スケジュール登録ボタンが押下された際の処理です。
+    // 週スケポートレットの登録するボタン押下時の処理です。
+    function createSdsyoFromPortlet() {
+        commonCreateOrUpdateTimePicker();
+        if (!commonCreateOrUpdateSdsyo("createSdsyo", null)) {
+            return false;
+        }
+        exec("createSdsyo", $("sendDummy"), null );
+    }
+
+    function showThisWeek() {
+      showWeeklyCalender("selectThisWeekChange", null);
+    }
+
+    function showNextWeek() {
+      showWeeklyCalender("selectNextWeekChange", weekStartDay);
+    }
+
+    function showLastWeek() {
+      showWeeklyCalender("selectLastWeekChange", weekStartDay);
+    }
+
+    function showNextDay() {
+      showWeeklyCalender("selectNextDayChange", weekStartDay);
+    }
+
+    function showLastDay() {
+      showWeeklyCalender("selectLastDayChange", weekStartDay);
+    }
+
+    function showSelectDay(startday) {
+      showWeeklyCalender("selectDayStateChange", startday)
+    }
+
+    function showWeeklyCalender(buttonName, startday) {
+      var requestURL = wbassdwrRrequestURL;
+      var param = {
+        'value(startday)'   : startday,
+        'buttonName'        : buttonName
+      };   
+      ajaxRequest(requestURL, param, loadResultWeeklyCalender, "weekly_calender");
+    }
+
+    function loadResultWeeklyCalender(data) {
+      jq$("#weekly_calender").empty().append(data);
+      redrawWeeklyHeader();
+    }
+
+    // 時間割フロートダイアログ
+    function openJikanFloat(risyunen, semekikn, kougicd, jikanNo, jigenkn, msgsyukn, messgId, indexNo, redispday) {
+      var requestURL = wbassdwrRrequestURL;
+      var param = {
+        'value(risyunen)'   : risyunen,
+        'value(semekikn)'   : semekikn,
+        'value(kougicd)'   : kougicd,
+        'value(jikanNo)'   : jikanNo,
+        'value(jigenkn)'   : jigenkn,
+        'value(msgsyukn)'   : msgsyukn,
+        'value(messgId)'   : messgId,
+        'value(indexNo)'   : indexNo,
+        'value(redispday)'   : redispday,
+        'buttonName': 'selectJikan'
+      };
+
+      var scrollValues = new Array(document.documentElement.scrollLeft, document.documentElement.scrollTop);
+      ajaxRequest(requestURL, param, loadJikanDetail, "jikanwariDialog1", scrollValues);
+    }
+
+    function loadJikanDetail(data) {
+      jq$("#resultJikanTableBody").empty().append(data);
+      openFloatDialog("#jikanwariDialog1", 600, wbassdwrDetailJikan);
+      overwriteJyugyoCssWbasSdwr();
+    }
+
+    // 授業日程変更選択時に縦位置調整のためCSS上書き
+    function overwriteJyugyoCssWbasSdwr(){
+      var afterHeight;
+      var beforeHeight;
+      
+      jq$(".afterBlock").each(function() {
+        if (0 != parseInt(jq$(this).height())) {
+          afterHeight =  parseInt(jq$(this).height());
+        }
+      });
+      jq$(".beforeBlock").each(function() {
+        if (0 != parseInt(jq$(this).height())) {
+          beforeHeight =  parseInt(jq$(this).height());
+        }
+      });
+      
+      var leftArrowHeight = parseInt(jq$(".leftArrow").height());
+      if(afterHeight < beforeHeight){
+        var arterMargin = (beforeHeight - afterHeight) / 2;
+        jq$(".afterBlock").css("margin-top", arterMargin)
+        var leftArrowMargin = (beforeHeight - leftArrowHeight) / 2 + 6;
+        jq$(".leftArrow").css("top", leftArrowMargin)
+      }else if(afterHeight > beforeHeight){
+        var beforeMargin = (afterHeight - beforeHeight) / 2;
+        jq$(".beforeBlock").css("margin-top", beforeMargin)
+        var leftArrowMargin = (afterHeight - leftArrowHeight) / 2 + 6;
+        jq$(".leftArrow").css("top", leftArrowMargin)
+      }else{
+        var leftArrowMargin = (afterHeight - leftArrowHeight) / 2 + 6;
+        jq$(".leftArrow").css("top", leftArrowMargin)  
+      }
+    }
+
+    // スケジュールフロートダイアログ
+    function openSdwrScheduleFloat(sdsyoId, indexNo, redispday) {
+      var requestURL = wbassdwrRrequestURL;
+      var param = {
+        'value(sdsyoId)'   : sdsyoId,
+        'value(indexNo)'   : indexNo,
+        'value(redispday)'   : redispday,
+        'buttonName': 'selectSchedule'
+      };
+
+      var scrollValues = new Array(document.documentElement.scrollLeft, document.documentElement.scrollTop);
+      ajaxRequest(requestURL, param, loadSdwrScheduleDetail, "sdwrScheduleDialog1", scrollValues);
+    }
+
+    function loadSdwrScheduleDetail(data) {
+      jq$("#resultSdwrScheduleTableBody").empty().append(data);
+      openFloatDialog("#sdwrScheduleDialog1", 600, wbassdwrDetailSched);
+    }
+
+    function delayedSearchWeeklySchedule() {
+        var requestURL = wbassdwrRrequestURL;
+        var param = {
+            'value(startday)'   : weekStartDay,
+            'buttonName': 'delayedSearchWeeklySchedule'
+        };
+        blockDelayedLoad('wbassdwrForm', '#fff0f5');
+        ajaxRequest(requestURL, param, loadWbasSdwrList, "wbassdwrForm", null, true, false);
+    }
+
+    function loadWbasSdwrList(data) {
+        jq$("#WbasSdwrPortlet").empty().append(data);
+        redrawWeeklyHeader();
+    }
+
+    function redrawWeeklyHeader() {
+        // design02のIE8でヘッダが崩れるので再描画
+        if(((/*@cc_on!@*/false) && document.documentMode <= 8) && ~wbassdwrDesign.indexOf("02")) {
+            var cloningElement = $('weeklyPortletHeader').cloneNode(true);
+            jq$('#weeklyPortletHeader').empty();
+            jq$('#weeklyPortletHeader').attr('id', 'oldWeeklyPortletHeader');
+            jq$('#WbasSdwrPortlet').before(cloningElement);
+            jq$('#oldWeeklyPortletHeader').remove();
+            
+            jq$("#date-pick").datepicker( {
+                beforeShowDay: function(date) { 
+                  if (date.getDay() == 6) {
+                    return [true, "saturday"]; 
+                  } else if (date.getDay() == 0) {
+                    return [true, "holiday"];
+                  } else { 
+                    return [true,"weekday"]; 
+                  } 
+                }, multi: false,
+                onSelect: function(dateText, inst) {
+                  showSelectDay(dateText);
+                }
+            });
+        }
+    }
+
+  //-->
+</script>
+
+<form name="portletForm" id="wbassdwrForm" method="post" action="/portal/wbassdwr.do" style="position: static; zoom: 1;">
+  <input type="hidden" name="buttonName" value="">
+<input type="hidden" name="timestamp" value="1757169826193">
+<input type="hidden" name="contenam" value="wbassdwr">
+
+
+  <div class="weekly_portlet">
+  
+    <div id="weekly_calender">
+      
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+
+jq$(function(){
+  // design02のIE8は別定義しているので除外
+  if (!(((/*@cc_on!@*/false) && document.documentMode <= 8) && ~wbassdwrDesign.indexOf("02"))) {
+    jq$("#date-pick").datepicker( {
+      beforeShowDay: function(date) { 
+        if (date.getDay() == 6) {
+          return [true, "saturday"]; 
+        } else if (date.getDay() == 0) {
+          return [true, "holiday"];
+        } else { 
+          return [true,"weekday"]; 
+        } 
+      }, multi: false,
+      onSelect: function(dateText, inst) {
+        showSelectDay(dateText);
+      }
+    });
+  }
+});
+    
+weekStartDay = '2025/09/06';
+
+function checkAllowedSdsyo(){
+    
+    
+    
+    location.href='./wbassdwr.do?buttonName=goToError';
+    
+}
+//-->
+</script>
+
+
+
+<div class="title" id="weeklyPortletHeader">
+  <div class="base">
+    <div class="label">週間スケジュール</div>
+      <div class="button_blk1">
+        <input type="button" class="schedule" alt="スケジュールを登録" onclick="checkAllowedSdsyo();">
+      </div>
+
+      <div class="button_blk2">
+
+        <input type="button" class="this_week" alt="今週を表示" onclick="showThisWeek();" id="ThisWeekButton">
+        <input type="button" class="date_rewind2" alt="１週戻し" onclick="showLastWeek();" id="LastWeekButton">
+        <input type="button" class="date_rewind1" alt="一日戻し" onclick="showLastDay();" id="LastDayButton">
+          
+        
+        <input type="text" name="" value="2025/09/06～2025/09/12" id="date-pick" class="date_wind hasDatepicker">
+                       
+        <input type="button" class="date_wind1" alt="１日送り" onclick="showNextDay();" id="NextDayButton">
+        <input type="button" class="date_wind2" alt="１週送り" onclick="showNextWeek();" id="NextWeekButton">
+
+        
+        <div class="button_weekly" onclick="location.href='./wbassdwr.do?buttonName=goToSchedWeekFromPortlet'"></div>
+        <div class="button_monthly" onclick="location.href='./wbassdwr.do?buttonName=goToSched'"></div>
+      </div>
+  </div>
+</div>
+  <div id="WbasSdwrPortlet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+function checkAllowedSdsyo(){
+    
+    showSendlist();
+    
+    
+    
+}
+//-->
+</script>
+
+<table id="weekly" summary="weekly">
+  
+  
+  <tbody><tr>
+    <td class="out_line"></td>
+    <td class="out_line_x_b"></td>
+    <td class="out_line_x_b"></td>
+    <td class="out_line_x_b"></td>
+    <td class="out_line_x_b"></td>
+    <td class="out_line_x_b"></td>
+    <td class="out_line_x_b"></td>
+    <td class="out_line_x_b"></td>
+  </tr>
+  
+
+  
+  <tr>
+    <th class="out_line_y"></th>
+      
+        
+          
+          
+            
+          
+        
+        <th class="corner_1">
+        
+          
+          
+        <div class="inner_sat sat">
+         <a href="./wbassdwr.do?buttonName=goToSchedWeekFromPortlet&amp;selectYear=2025&amp;selectMonth=9&amp;selectDay=6">
+          9/ 6 (土) 
+         </a>
+        </div>
+          
+          
+        
+      </th>
+    
+        
+          
+          
+            
+          
+        
+        <th class="corner_1">
+        
+          
+        <div class="inner_sun sun">
+         <a href="./wbassdwr.do?buttonName=goToSchedWeekFromPortlet&amp;selectYear=2025&amp;selectMonth=9&amp;selectDay=7">
+          9/ 7 (日) 
+         </a>
+        </div>
+          
+          
+          
+        
+      </th>
+    
+        
+          
+          
+            
+          
+        
+        <th class="corner_1">
+        
+          
+          
+          
+        <div class="inner">
+         <a href="./wbassdwr.do?buttonName=goToSchedWeekFromPortlet&amp;selectYear=2025&amp;selectMonth=9&amp;selectDay=8">
+          9/ 8 (月) 
+         </a>
+        </div>
+          
+        
+      </th>
+    
+        
+          
+          
+            
+          
+        
+        <th class="corner_1">
+        
+          
+          
+          
+        <div class="inner">
+         <a href="./wbassdwr.do?buttonName=goToSchedWeekFromPortlet&amp;selectYear=2025&amp;selectMonth=9&amp;selectDay=9">
+          9/ 9 (火) 
+         </a>
+        </div>
+          
+        
+      </th>
+    
+        
+          
+          
+            
+          
+        
+        <th class="corner_1">
+        
+          
+          
+          
+        <div class="inner">
+         <a href="./wbassdwr.do?buttonName=goToSchedWeekFromPortlet&amp;selectYear=2025&amp;selectMonth=9&amp;selectDay=10">
+          9/10 (水) 
+         </a>
+        </div>
+          
+        
+      </th>
+    
+        
+          
+          
+            
+          
+        
+        <th class="corner_1">
+        
+          
+          
+          
+        <div class="inner">
+         <a href="./wbassdwr.do?buttonName=goToSchedWeekFromPortlet&amp;selectYear=2025&amp;selectMonth=9&amp;selectDay=11">
+          9/11 (木) 
+         </a>
+        </div>
+          
+        
+      </th>
+    
+        
+          
+            
+          
+          
+        
+        <th class="corner_2">
+        
+          
+          
+          
+        <div class="inner">
+         <a href="./wbassdwr.do?buttonName=goToSchedWeekFromPortlet&amp;selectYear=2025&amp;selectMonth=9&amp;selectDay=12">
+          9/12 (金) 
+         </a>
+        </div>
+          
+        
+      </th>
+    
+  </tr>  
+
+  
+  <tr>  
+    
+      
+        <td class="out_line_y"><div style="min-height: 80px"></div></td>   
+         
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+           
+        
+        
+      
+      <td class="in_line_y sat" style="min-height: 80px">
+        
+          
+        
+
+        
+        
+      </td>
+    
+         
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+        
+        
+        
+      
+      <td class="in_line_y sun" style="min-height: 80px">
+        
+          
+        
+
+        
+        
+      </td>
+    
+         
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+        
+      
+      <td class="in_line_y" style="min-height: 80px">
+        
+          
+        
+
+        
+        
+          
+            <div class="details">
+              <div class="period"></div>
+              <div class="sdwrText">              
+                
+                  <div class="icons_1"><img src="img/design01/ico_clock_s.png" class="icon"></div>
+                
+                
+                <span class="text">
+                  <a href="javascript:void(0)" style="top:0px;" onclick="openSdwrScheduleFloat(34477,'2','2025/09/06');return false;">
+                    履修登録①
+                  </a>
+                </span>
+              </div>
+            </div>
+          
+          
+          <div class="view"><a href="#"></a></div>
+        
+      </td>
+    
+         
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+        
+      
+      <td class="in_line_y" style="min-height: 80px">
+        
+          
+        
+
+        
+        
+          
+            <div class="details">
+              <div class="period"></div>
+              <div class="sdwrText">              
+                
+                  <div class="icons_1"><img src="img/design01/ico_clock_s.png" class="icon"></div>
+                
+                
+                <span class="text">
+                  <a href="javascript:void(0)" style="top:0px;" onclick="openSdwrScheduleFloat(34477,'3','2025/09/06');return false;">
+                    履修登録①
+                  </a>
+                </span>
+              </div>
+            </div>
+          
+          
+          <div class="view"><a href="#"></a></div>
+        
+      </td>
+    
+         
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+        
+      
+      <td class="in_line_y" style="min-height: 80px">
+        
+          
+        
+
+        
+        
+      </td>
+    
+         
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+        
+      
+      <td class="in_line_y" style="min-height: 80px">
+        
+          
+        
+
+        
+        
+      </td>
+    
+         
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+        
+        
+          
+        
+      
+      <td class="in_line_y" style="min-height: 80px">
+        
+          
+            
+              <div class="details">
+                <div class="period">
+                  
+                    
+                    
+                      
+                         
+                         
+                           
+                           
+                             
+                             
+                               
+                               ２時限
+                             
+                           
+                         
+                       
+                       
+                      
+                    
+                    
+                  
+                </div>
+                <div class="sdwrText">
+                  <span class="icons_1">
+                    
+                  </span>
+                  <span class="text">
+                    <a href="javascript:void(0)" style="top:0px;" onclick="openJikanFloat(2025,'1','5300100032',1,'2','','','6','2025/09/06');return false;">
+                      機械学習アルゴリズムデザイン
+                    </a>
+                  </span>
+                </div>
+              </div>
+            
+              <div class="details">
+                <div class="period">
+                  
+                    
+                    
+                      
+                         
+                         
+                           
+                           
+                             
+                             
+                               
+                               ３時限
+                             
+                           
+                         
+                       
+                       
+                      
+                    
+                    
+                  
+                </div>
+                <div class="sdwrText">
+                  <span class="icons_1">
+                    
+                  </span>
+                  <span class="text">
+                    <a href="javascript:void(0)" style="top:0px;" onclick="openJikanFloat(2025,'1','5300100032',1,'3','','','6','2025/09/06');return false;">
+                      機械学習アルゴリズムデザイン
+                    </a>
+                  </span>
+                </div>
+              </div>
+            
+              <div class="details">
+                <div class="period">
+                  
+                    
+                    
+                      
+                         
+                         
+                           
+                           
+                             
+                             
+                               
+                               ４時限
+                             
+                           
+                         
+                       
+                       
+                      
+                    
+                    
+                  
+                </div>
+                <div class="sdwrText">
+                  <span class="icons_1">
+                    
+                  </span>
+                  <span class="text">
+                    <a href="javascript:void(0)" style="top:0px;" onclick="openJikanFloat(2025,'1','5300100032',1,'4','','','6','2025/09/06');return false;">
+                      機械学習アルゴリズムデザイン
+                    </a>
+                  </span>
+                </div>
+              </div>
+            
+              <div class="details">
+                <div class="period">
+                  
+                    
+                    
+                      
+                         
+                         
+                           
+                           
+                             
+                             
+                               
+                               ５時限
+                             
+                           
+                         
+                       
+                       
+                      
+                    
+                    
+                  
+                </div>
+                <div class="sdwrText">
+                  <span class="icons_1">
+                    
+                  </span>
+                  <span class="text">
+                    <a href="javascript:void(0)" style="top:0px;" onclick="openJikanFloat(2025,'1','5300100032',1,'5','','','6','2025/09/06');return false;">
+                      機械学習アルゴリズムデザイン
+                    </a>
+                  </span>
+                </div>
+              </div>
+            
+            
+            
+          
+        
+
+        
+        
+          
+            <div class="details">
+              <div class="period"></div>
+              <div class="sdwrText">              
+                
+                  <div class="icons_1"><img src="img/design01/ico_clock_s.png" class="icon"></div>
+                
+                
+                <span class="text">
+                  <a href="javascript:void(0)" style="top:0px;" onclick="openSdwrScheduleFloat(34474,'6','2025/09/06');return false;">
+                    履修登録②
+                  </a>
+                </span>
+              </div>
+            </div>
+          
+          
+          <div class="view"><a href="#"></a></div>
+        
+      </td>
+    
+
+  </tr>
+  
+  <tr>
+    <td class="out_line"></td>
+    <td class="out_line_x_t"></td>
+    <td class="out_line_x_t"></td>
+    <td class="out_line_x_t"></td>
+    <td class="out_line_x_t"></td>
+    <td class="out_line_x_t"></td>
+    <td class="out_line_x_t"></td>
+    <td class="out_line_x_t"></td>
+  </tr>
+</tbody></table></div>
+  
+
+    </div>   
+
+    <span id="sendDummy"></span>
+    <br class="clear">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+.selectedTargets {
+    background-color: ;
+}
+
+.detail .label_accent, .detail .label {
+    white-space:nowrap;
+    width:22%
+}
+
+#fromToBlock input, #fromToBlock label, #multiBlock input, #multiBlock font{
+    float:left;
+    margin-right:6px;
+}
+
+.ellipsisStyle {
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+</style>
+
+<script type="text/javascript">
+<!--
+
+  jq$(document).ready(function(){
+    var scrollValues = new Array(0, 0);
+    var groupFormTopBorder = false;
+    var contentsFormTopBorder = false;
+
+    if(false){
+        jq$("#memberSelectBox").empty();
+        jq$("#targetSelectBox").empty();
+        isEnableButton();
+        openFloatDialogWithScroll("#commentDialog", 900, "スケジュール登録", scrollValues);
+        if(false) {
+            jq$("#memberSelectBox").empty();
+            jq$("#targetSelectBox").empty();
+            isEnableButton();
+            changeSchedule();
+        } else if(false) {
+            changeTodo();
+        } else {
+            changeGroupSchedule();
+            
+            if (0 != null) {
+                findGrpcdMembers(true);
+            } 
+        }
+    }
+
+    if(false){
+        jq$("#memberSelectBox").empty();
+        jq$("#targetSelectBox").empty();
+        isEnableButton();
+        openFloatDialogWithScroll("#commentDialog", 900, "スケジュール更新", scrollValues);
+        changeSchedule();
+        contentsFormTopBorder = true;
+    }
+
+    if(false){
+        openFloatDialogWithScroll("#commentDialog", 900, "スケジュール更新", scrollValues);
+        changeGroupSchedule();
+        isEnableButton();
+        groupFormTopBorder = true;
+    }
+
+    if(false) {
+        openFloatDialogWithScroll("#commentDialog2", 900, "スケジュール参照", scrollValues);
+        contentsFormTopBorder = true;
+    }
+
+    if(false){
+        jq$("#memberSelectBox").empty();
+        jq$("#targetSelectBox").empty();
+        isEnableButton();
+        openFloatDialogWithScroll("#commentDialog", 900, "ToDo更新", scrollValues);
+        changeTodo();
+        contentsFormTopBorder = true;
+    }
+
+    if(false) {
+        openFloatDialogWithScroll("#grpsdReferDialog", 900, "スケジュール参照", scrollValues);
+    }
+
+    jq$("#tourokuSyubetsuForm").css("border-bottom","0pt");
+    if (groupFormTopBorder) {
+        jq$("#groupForm").css("border-top","1pt solid #6D584E");
+        jq$("#groupBlockLine").hide();
+        jq$("#contentsForm").css("border-top","0pt");
+    } else {
+        jq$("#groupForm").css("border-top","0pt");
+        if (contentsFormTopBorder) {
+            jq$("#contentsForm").css("border-top","1pt solid #6D584E");
+            jq$("#contentsBlockLine").hide();
+        } else {
+            jq$("#contentsForm").css("border-top","0pt");
+        }
+    }
+    jq$("#groupForm").css("border-bottom","0pt");
+    jq$("#contentsForm").css("border-bottom","0pt");
+    jq$("#timePlaceForm").css("border-top","0pt");
+    if (false) {
+        jq$("#timePlaceForm").css("border-bottom","0pt");
+    }
+    jq$("#koukaiKubunForm").css("border-top","0pt");
+    jq$("#todoForm").css("border-top","0pt");
+  });
+
+    jq$(function(){
+        setDatePicker("#date-pick1");
+        setDatePicker("#date-pick2");
+        setDatePicker("#date-pick3");
+        setDatePicker("#date-pick-multi",true);
+        setTimePicker("#time-pick1");
+        setTimePicker("#time-pick2");
+        setTimePicker("#time-pick3");
+        setTimePicker("#time-pick4");
+        setTimePicker("#time-pick5");
+    });
+
+    
+    function refreshStyle() {
+        jq$("#tourokuSyubetsuForm").css("font-size", "1.0em");
+        jq$("#tourokuSyubetsuForm").css("font-family", "'MS PGothic', 'MS Gothic', Gothic, sans-serif");
+    }
+
+    
+    function changeTodo() {
+        $('groupBlock').hide();
+        $('timePlaceBlock').hide();
+        $('koukaiKubunBlock').hide();
+        $('todoBlock').show();
+        $('groupMemberBlock').hide();
+
+        $("_kjnschkn").value = 2;
+    }
+
+    
+    function changeSchedule() {
+        $('groupBlock').hide();
+        $('timePlaceBlock').show();
+        $('koukaiKubunBlock').show();
+        $('todoBlock').hide();
+        $('groupMemberBlock').hide();
+
+        changeDateTime();
+        $("_kjnschkn").value = 1;
+    }
+
+    
+    function changeGroupSchedule() {
+        $('groupBlock').show();
+        $('timePlaceBlock').show();
+        $('koukaiKubunBlock').hide();
+        $('todoBlock').hide();
+        $('groupMemberBlock').show();
+
+        changeDateTime();
+        $("_kjnschkn").value = 3;
+    }
+
+    
+    function changeDateTime() {
+        var multiflg = $F("multiflgRadioBtn");
+        if(1 == multiflg) {
+            changeMulti();
+        } else {
+            changeFromTo();
+        }
+
+        var syjitflg = $F("timeall1");
+        if(1 == syjitflg){
+            $('time-pick1').hide();
+            $('time-pick2').hide();
+        } else {
+            $('time-pick1').show();
+            $('time-pick2').show();
+        }
+
+        var syjitMultiflg = $F("timeall2");
+        if(1 == syjitMultiflg){
+            $('time-nami1').hide();
+        } else {
+            $('time-nami1').show();
+        }
+    }
+
+    
+    function changeFromTo() {
+        $('fromToBlock').show();
+        $('multiBlock').hide();
+    }
+
+    
+    function changeMulti() {
+        $('fromToBlock').hide();
+        $('multiBlock').show();
+    }
+
+    function syjitflgCeckBox() {
+        if($('timeall1').checked) {
+            $('time-pick1').hide();
+            $('time-pick2').hide();
+            refreshStyle();
+        } else {
+            $('time-pick1').show();
+            $('time-pick2').show();
+        }
+    }
+
+    
+    function syjitflgCeckBoxMulti() {
+        if($('timeall2').checked) {
+            $('time-nami1').hide();
+            refreshStyle();
+        } else {
+            $('time-nami1').show();
+        }
+    }
+
+    
+    function createSdsyo() {
+        if ($("_kjnschkn").value == 2) {
+            $("_schedyTStr").value = $F("date-pick3");
+            $("_schtmhTStr").value = $F("time-pick5");
+            $("_doneflg").value = 2;
+        } else {
+            commonCreateOrUpdateTimePicker();
+        }
+        $("_grpsdCd").value = $F("grpsdCdCombo");
+        if (!commonCreateOrUpdateSdsyo("createSdsyo", "createSdsyoFromToDo")) {
+            return false;
+        }
+        $("form").submit();
+    }
+
+    
+    function updateSdsyo() {
+      if (false) {
+          commonCreateOrUpdateTimePicker();
+      } else {
+          $("_schedyTStr").value = $F("date-pick3");
+          $("_schtmhTStr").value = $F("time-pick5");
+          var doneflg = $F("doneflgRadioBtn");
+          if(1 != doneflg) {
+              doneflg = 2;
+          }
+          $("_doneflg").value = doneflg;
+      }
+      $("sdsyoId").value = "";
+
+      if (!commonCreateOrUpdateSdsyo("updateSdsyo", "updateSdsyoFromToDo")) {
+          return false;
+      }
+      $("form").submit();
+    }
+
+    
+    function createGrpsdSdsyo() {
+        commonCreateOrUpdateTimePicker();
+        if (!commonCreateOrUpdateSdsyo("createGrpsdSdsyo", null)) {
+            return false;
+        }
+        $("form").submit();
+    }
+
+    
+    function updateGrpsdSdsyo() {
+        $("sdsyoId").value = "";
+        commonCreateOrUpdateTimePicker();
+        if (!commonCreateOrUpdateSdsyo("updateGrpsdSdsyo", null)) {
+            return false;
+        }
+        $("form").submit();
+    }
+
+    
+    function deleteGrpsdSdsyo() {
+        if(confirm("削除してもよろしいですか？")) {
+            $("sdsyoId").value = "";
+            $("selectButtonName").name = "deleteGrpsdSdsyo";
+            $("selectButtonName").value = "deleteGrpsdSdsyo";
+            $("form").submit();
+        }
+    }
+
+    
+    function commonCreateOrUpdateSdsyo(schedButton, todoButton) {
+        if (0 == checkInputData()) {
+            return false;
+        }
+
+        var multiflg = $F("multiflgRadioBtn");
+        if(1 != multiflg) {
+            multiflg = 2;
+        }
+        var syjitflg = $F("timeall1");
+        if (1 != syjitflg) {
+            syjitflg = 2;
+        }
+        var syjitMultiflg = $F("timeall2");
+        if (1 != syjitMultiflg) {
+            syjitMultiflg = 2;
+        }
+
+        if (false ) {
+            var groupkokaiflg = $F("groupkokaiflgRadioBtn");
+            if(1 != groupkokaiflg) {
+                groupkokaiflg = 2;
+            }
+            $("_groupkokaiflg").value = groupkokaiflg;
+        }
+
+        $("_title").value = $F("titleText");
+        $("_naiyo").value = $F("naiyoText");
+        $("_multiflg").value = multiflg;
+        $("_syjitflg").value = syjitflg;
+        $("_syjitMultiflg").value = syjitMultiflg;
+
+        if(false) {
+            $("selectButtonName").name = todoButton;
+            $("selectButtonName").value = todoButton;
+        } else {
+            $("selectButtonName").name = schedButton;
+            $("selectButtonName").value = schedButton;
+
+            if (false) {
+                var targetOption = $("targetSelectBox").options;
+                if (targetOption.length != 0) {
+                    $('_targetIds').value = targetOption[0].value;
+                    for (i = 1; i < targetOption.length; i++) {
+                        $('_targetIds').value += "," + targetOption[i].value;
+                    }
+                } else {
+                    $('_targetIds').value = "";
+                }
+            }
+        }
+        return true;
+    }
+
+    
+    function commonCreateOrUpdateTimePicker() {
+        $("_schedyFStr").value = $F("date-pick1");
+        $("_schedyTStr").value = $F("date-pick2");
+
+        var syjitflg = $F("timeall1");
+        if (1 != syjitflg) {
+            syjitflg = 2;
+        }
+        var syjitMultiflg = $F("timeall2");
+        if (1 != syjitMultiflg) {
+            syjitMultiflg = 2;
+        }
+
+        if (1 != syjitflg) {
+            $("_schtmhFStr").value = $F("time-pick1");
+            $("_schtmhTStr").value = $F("time-pick2");
+        }
+        if (1 != syjitMultiflg) {
+            $("_schtmhFMultiStr").value = $F("time-pick3");
+            $("_schtmhTMultiStr").value = $F("time-pick4");
+        }
+        $("_schedyMultiStr").value = $F("date-pick-multi");
+        $("_place").value = $F("placeText");
+    }
+
+    
+    function deleteConfirm() {
+        if(confirm("削除してもよろしいですか？")) {
+            $("sdsyoId").value = "";
+
+            if(false) {
+                $("selectButtonName").name = "deleteSdsyoFromToDo";
+                $("selectButtonName").value = "deleteSdsyoFromToDo";
+            } else {
+                $("selectButtonName").name = "deleteSdsyo";
+                $("selectButtonName").value = "deleteSdsyo";
+            }
+            $("form").submit();
+        }
+    }
+
+    
+    function deleteGrpsdConfirm() {
+        if(confirm("削除してもよろしいですか？")) {
+            $("sdsyoId").value = "";
+            $("selectButtonName").name = "deleteGrpsd";
+            $("selectButtonName").value = "deleteGrpsd";
+            $("form").submit();
+        }
+    }
+
+    
+    function findGrpcdMembers(selected) {
+        var selectedGrpsdCd;
+        if (selected) {
+            
+            selectedGrpsdCd = $("_grpsdCd").value;
+        } else {
+            var NumOfPeople = $("memberSelectBox").options.length + $("evacuateSelectBox").options.length + $("targetSelectBox").options.length;
+
+            if (NumOfPeople != 0) {
+                if (!confirm("グループを変更します。検索結果は一度クリアされますが、よろしいですか？")) {
+                    $("grpsdCdCombo").value = $("_grpsdCd").value;
+                    return false;
+                }
+            }
+            $("_grpsdCd").value = $("grpsdCdCombo").value;
+            selectedGrpsdCd = $("grpsdCdCombo").value;
+        }
+        var requestURL = "wbassdwr.do";
+        var param = {
+             'value(grpsdCd)': selectedGrpsdCd,
+             'buttonName': "findGrpcdMembers"
+        };
+        ajaxRequest(requestURL, param, loadResultList, "groupMemberBlock");
+    }
+
+    
+    function loadResultList(data) {
+        evacuateMemberRestitution(true);
+        jq$("#memberSelectBox").empty().append(data);
+        jq$("#targetSelectBox").empty();
+        jq$('#memberSelectBox').val();
+        moveMembers("memberBox", "targetBox");
+        jq$("#targetSelectBox").val(null);
+        isEnableButton();
+        displayGroupErrorMessage(false);
+        setAttrAndClass();
+    }
+
+    function selectAll() {
+        moveAllMembers("memberBox", "targetBox");
+
+        evacuateMemberRestitution(true);
+        sortSelect("targetSelectBox");
+    }
+
+    function selectMember() {
+        if($("memberSelectBox").selectedIndex == -1) {
+            alert("グループメンバを選択してください。");
+            return false;
+        }
+        moveMembers("memberBox", "targetBox");
+        evacuateMemberRestitution(true);
+        sortSelect("targetSelectBox");
+    }
+
+    function dropTarget() {
+        if($("targetSelectBox").selectedIndex == -1) {
+            alert("対象者を選択してください。");
+            return false;
+        }
+        moveMembers("targetBox", "memberBox");
+        evacuateMemberRestitution(true);
+        sortSelect("memberSelectBox");
+    }
+
+    function dropAll() {
+        moveAllMembers("targetBox", "memberBox");
+
+        evacuateMemberRestitution(true);
+        sortSelect("memberSelectBox");
+    }
+
+    function moveMembers(source, destination) {
+        jq$("select[name=" + source + "] option:selected").each(function() {
+            jq$("select[name=" + destination + "]").append(jq$(this).clone());
+            jq$(this).remove();
+        });
+    }
+
+    function moveAllMembers(source, destination) {
+        jq$("select[name=" + source + "] option").each(function() {
+            jq$("select[name=" + destination + "]").append(jq$(this).clone());
+            jq$(this).remove();
+        });
+    }
+
+    function sortSelect(id) {
+        var sortedDdl = jq$.makeArray(jq$('select#' + id + ' option')).sort(function(o, n) {
+            return eval(jq$(o).val()) < eval(jq$(n).val()) ? -1 : 1;
+        });
+        jq$('select#' + id).html(sortedDdl).val('0');
+        jq$(this).attr('disabled', 'disabled');
+        jq$('select#' + id).children().each(
+            function(i){ jq$(this).removeAttr('selected') }
+        );
+        isEnableButton();
+        return false;
+    }
+
+    function isMemberMatchingPartialIncremental(keyword) {
+        if (keyword !== '') {
+            var members = $("memberSelectBox").options;
+            for (i=members.length - 1; 0 <= i; i--) {
+                if (-1 == members[i].title.indexOf(keyword)) {
+                    jq$("select[name=evacuateBox]").append(jq$(members[i]).clone());
+                    jq$(members[i]).remove();
+                }
+            }
+        }
+    }
+
+    jq$(function(){
+        jq$('#keywordSearchForm').keyup(function(){
+            var value = this.value;
+            var timeoutId = null;
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+
+            timeoutId = setTimeout(function(){
+                timeoutId = null;
+                evacuateMemberRestitution(false);
+                isMemberMatchingPartialIncremental(value);
+            }, 800);
+        });
+    });
+
+    function evacuateMemberRestitution(isClear) {
+        jq$("select#evacuateSelectBox").children().each(function () {
+            jq$(this).attr('selected', 'selected');
+        });
+
+        if (isClear) {
+            $('keywordSearchForm').value = "";
+        }
+        moveMembers("evacuateBox", "memberBox");
+        sortSelect("memberSelectBox")
+    }
+
+    function isEnableButton() {
+        var members = $("memberSelectBox").options;
+        var targets = $("targetSelectBox").options;
+
+        if (members.length == 0) {
+            var evacuates = $("evacuateSelectBox").options;
+            if (evacuates.length == 0) {
+                keywordSearchDisabled(true);
+            }
+            $('selectAllButton').disabled = true;
+            $('selectButton').disabled = true;
+            jq$("#selectAllButton").addClass('disabledButton');
+            jq$("#selectButton").addClass('disabledButton');
+        } else {
+            keywordSearchDisabled(false);
+            $('selectAllButton').disabled = false;
+            $('selectButton').disabled = false;
+            jq$("#selectAllButton").removeClass('disabledButton');
+            jq$("#selectButton").removeClass('disabledButton');
+        }
+        if (targets.length == 0) {
+            $('dropAllButton').disabled = true;
+            $('dropButton').disabled = true;
+            jq$("#dropAllButton").addClass('disabledButton');
+            jq$("#dropButton").addClass('disabledButton');
+        } else {
+            $('dropAllButton').disabled = false;
+            $('dropButton').disabled = false;
+            jq$("#dropAllButton").removeClass('disabledButton');
+            jq$("#dropButton").removeClass('disabledButton');
+        }
+    }
+
+    function keywordSearchDisabled(bool) {
+        $('keywordSearchForm').disabled = bool;
+        $('clearButton').disabled = bool;
+        if (bool) {
+            jq$("#clearButton").addClass('disabledButton');
+        } else {
+            jq$("#clearButton").removeClass('disabledButton');
+        }
+    }
+
+    Array.prototype.contains = function(value){
+        var count = 0;
+        for(var i in this){
+            if( this.hasOwnProperty(i) && this[i].toString() === value.toString()){
+                count++;
+            }
+        }
+        return count;
+    }
+        
+    function checkInputData() {
+        var bool = 1;
+        var kjnschkn = $("_kjnschkn").value;
+            
+        
+        if(false && false && false && $('grpsdCdChecked') != null && $('grpsdCdChecked').checked){
+            if ($('grpsdCdCombo').value.length == 0) {
+                displayGroupErrorMessage(true);
+                bool = 0;
+            }
+        }
+        
+        
+        var titleLength = $('titleText').value.length;
+        if (titleLength == 0) {
+            displayTitleErrorMessage(true);
+            bool = 0;
+        } else if (titleLength > 50) {
+            displayTitleLengthErrorMessage(true);
+            bool = 0;
+        }
+
+        
+        var naiyoLength = $('naiyoText').value.length;
+        if (naiyoLength > 500) {
+            displayNaiyoLengthErrorMessage(true);
+            bool = 0;
+        }
+        
+        
+        if (kjnschkn == 2) {
+            var todoDate = $('date-pick3').value;
+            var todoTime = $('time-pick5').value;
+            if ((todoTime.length != 0) && (todoDate.length == 0)) {
+                displayTodoDateRequireErrorMessage();
+                bool = 0;
+            }
+            
+            if((todoDate.length != 0) && !todoDate.match(/^\d{4}\/\d{2}\/\d{2}$/)
+                    || !checkDateFormatInDetail(todoDate.substring(0,4), todoDate.substring(5,7), todoDate.substring(8))) {
+                displayTodoDateFormatErrorMessage();
+                bool = 0;
+            }
+            
+        } else {
+            var multiflg = $F("multiflgRadioBtn");
+            var syujitflg;
+            var startTime;
+            var endTime;
+            var requireTimeRangeCheck = true;
+            var dateError = false;
+            if(1 != multiflg) {
+                startTime = $('time-pick1').value;
+                endTime = $('time-pick2').value;
+                if ($("timeall1").checked) {
+                    syujitflg = true;
+                } else {
+                    syujitflg = false;
+                }
+                
+                var startDateValue = $('date-pick1').value;
+                var endDateValue = $('date-pick2').value;
+                var startTimeValue = $('time-pick1').value;
+                var endTimeValue = $('time-pick2').value;
+                if (startDateValue.length == 0) {
+                    displayStartDateRequireErrorMessage();
+                    bool = 0;
+                    dateError = true;
+                    requireTimeRangeCheck = false;
+                } else {
+                    
+                    if(!startDateValue.match(/^\d{4}\/\d{2}\/\d{2}$/)
+                            || !checkDateFormatInDetail(startDateValue.substring(0,4), startDateValue.substring(5,7), startDateValue.substring(8))) {
+                        displayStartDateFormatErrorMessage();
+                        bool = 0;
+                        dateError = true;
+                        requireTimeRangeCheck = false;
+                    }
+                }
+                if (endDateValue.length == 0) {
+                    displayEndDateRequireErrorMessage();
+                    bool = 0;
+                    dateError = true;
+                    requireTimeRangeCheck = false;
+                } else {
+                    
+                    if(!endDateValue.match(/^\d{4}\/\d{2}\/\d{2}$/)
+                        || !checkDateFormatInDetail(endDateValue.substring(0,4), endDateValue.substring(5,7), endDateValue.substring(8))) {
+                        displayEndDateFormatErrorMessage();
+                        bool = 0;
+                        dateError = true;
+                        requireTimeRangeCheck = false;
+                    }
+                }
+                if (!dateError) {
+                    
+                    
+                    var startDate = new Date(startDateValue +" "+ startTimeValue +":00");
+                    var endDate = new Date(endDateValue +" "+ endTimeValue +":00");
+                    if(startDate.getTime() > endDate.getTime()) {
+                        displayDateRangeErrorMessage();
+                        bool = 0;
+                        requireTimeRangeCheck = false;
+                    } else if (startDate.getTime() != endDate.getTime()) {
+                        requireTimeRangeCheck = false;
+                    }
+                }
+            } else {
+                startTime = $('time-pick3').value;
+                endTime = $('time-pick4').value;
+                if ($("timeall2").checked) {
+                    syujitflg = true;
+                } else {
+                    syujitflg = false;
+                }
+                if ($('date-pick-multi').value.length == 0) {
+                    displayMultipleDateRequireErrorMessage();
+                    bool = 0;
+                } else {
+                    var dateArray = $('date-pick-multi').value.split(",");
+                    
+                    for(var i = 0 ; i < dateArray.length ; i++) {
+                        if(!dateArray[i].match(/^\d{4}\/\d{2}\/\d{2}$/)
+                                || !checkDateFormatInDetail(dateArray[i].substring(0,4), dateArray[i].substring(5,7), dateArray[i].substring(8))) {
+                            displayMultiDateFormatErrorMessage();
+                            bool = 0;
+                            dateError = true;
+                            break;
+                        }
+                    }
+                    if (dateError != true) {
+                        
+                        if (dateArray.length > 1) {
+                            for(var i = 1 ; i < dateArray.length ; i++) {
+                                if (1 < dateArray.contains(dateArray[i])) {
+                                    displayMultiDateDuplicateErrorMessage(dateArray[i]);
+                                    bool = 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            if (!syujitflg) {
+                var timeError = false;
+                if (startTime.length == 0) {
+                    displayStartTimeRequireErrorMessage();
+                    bool = 0;
+                    timeError = true;
+                }
+                if (endTime.length == 0) {
+                    displayEndTimeRequireErrorMessage();
+                    bool = 0;
+                    timeError = true;
+                }
+                
+                
+                if (requireTimeRangeCheck && !timeError) {
+                    var startTimeMinutes = (eval(startTime.substring(0,2)) * 60) + eval(startTime.substring(3));
+                    var endTimeMinutes = (eval(endTime.substring(0,2)) * 60) + eval(endTime.substring(3));
+                    if (startTimeMinutes >= endTimeMinutes) {
+                        displayTimeRangeErrorMessage();
+                        bool = 0;
+                    }
+                }
+            }
+        }
+
+        
+        if (kjnschkn != 2) {
+            var placeLength = $('placeText').value.length;
+            if (placeLength > 50) {
+                displayPlaceLengthErrorMessage(true);
+                bool = 0;
+            }
+        }
+        
+        return bool;
+    }
+
+    function checkDateFormatInDetail(aYYYY,aMM,aDD){
+        var EndDay = [31,28,31,30,31,30,31,31,30,31,30,31];
+        
+        
+        if( ((aYYYY%4) == 0 && (aYYYY%100) != 0) || (aYYYY%400) == 0 ){
+            EndDay[1] = 29;
+        }else{
+            EndDay[1] = 28;
+        }
+        
+        if ((aMM < 13) && (aDD > EndDay[aMM-1])) {
+            return false;
+        }
+        return true;
+    }
+
+    jq$(function(){
+        jq$('#date-pick1').change(function(){
+            hideStartDateErrorMessage();
+        });
+    });
+    
+    jq$(function(){
+        jq$('#date-pick2').change(function(){
+            hideEndDateErrorMessage();
+        });
+    });
+    
+    jq$(function(){
+        jq$('#date-pick-multi').change(function(){
+            hideMultiDateErrorMessage();
+        });
+    });
+    
+    jq$(function(){
+        jq$('#date-pick3').change(function(){
+            hideTodoDateErrorMessage();
+        });
+    });
+
+    jq$(function(){
+        jq$('#time-pick1').change(function(){
+            hideStartTimeErrorMessage();
+        });
+    });
+
+    jq$(function(){
+        jq$('#time-pick3').change(function(){
+            hideStartTimeErrorMessage();
+        });
+    });
+    
+    jq$(function(){
+        jq$('#time-pick2').change(function(){
+            hideEndTimeErrorMessage();
+        });
+    });
+
+    jq$(function(){
+        jq$('#time-pick4').change(function(){
+            hideEndTimeErrorMessage();
+        });
+    });
+    
+    function displayGroupErrorMessage(bool) {
+        if (bool) {
+            jq$("#requireGroup").slideDown("normal");
+        } else {
+            jq$("#requireGroup").slideUp("normal");
+        }
+    }
+
+    function displayTitleErrorMessage(bool) {
+        if (bool) {
+            jq$("#requireTitle").slideDown("normal");
+        } else {
+            jq$("#requireTitle").slideUp("normal");
+            jq$("#tooMuchTitleLength").slideUp("normal");
+        }
+    }
+    
+    function displayTitleLengthErrorMessage(bool) {
+        if (bool) {
+            jq$("#tooMuchTitleLength").slideDown("normal");
+        } else {
+            jq$("#requireTitle").slideUp("normal");
+            jq$("#tooMuchTitleLength").slideUp("normal");
+        }
+    }
+
+    function displayNaiyoLengthErrorMessage(bool) {
+        if (bool) {
+            jq$("#tooMuchNaiyoLength").slideDown("normal");
+        } else {
+            jq$("#tooMuchNaiyoLength").slideUp("normal");
+        }
+    }
+
+    function displayDateRangeErrorMessage() {
+        jq$("#illegalDateRange").slideDown("normal");
+    }
+
+    function displayTimeRangeErrorMessage() {
+        jq$("#illegalTimeRange").slideDown("normal");
+    }
+
+    function displayStartDateRequireErrorMessage() {
+        jq$("#requireStartDate").slideDown("normal");
+    }
+
+    function displayStartDateFormatErrorMessage() {
+        jq$("#irregularStartDate").slideDown("normal");
+    }
+    
+    
+    function hideStartDateErrorMessage() {
+        jq$("#requireStartDate").slideUp("normal");
+        jq$("#irregularStartDate").slideUp("normal");
+        jq$("#illegalDateRange").slideUp("normal");
+    }
+
+    function displayStartTimeRequireErrorMessage() {
+        jq$("#requireStartTime").slideDown("normal");
+    }
+
+    
+    function hideStartTimeErrorMessage() {
+        jq$("#requireStartTime").slideUp("normal");
+        jq$("#illegalTimeRange").slideUp("normal");
+    }
+
+    function displayEndDateRequireErrorMessage() {
+        jq$("#requireEndDate").slideDown("normal");
+    }
+
+    function displayEndDateFormatErrorMessage() {
+        jq$("#irregularEndDate").slideDown("normal");
+    }
+    
+    
+    function hideEndDateErrorMessage() {
+        jq$("#requireEndDate").slideUp("normal");
+        jq$("#irregularEndDate").slideUp("normal");
+        jq$("#illegalDateRange").slideUp("normal");
+    }
+
+    function displayEndTimeRequireErrorMessage() {
+        jq$("#requireEndTime").slideDown("normal");
+    }
+
+    
+    function hideEndTimeErrorMessage() {
+        jq$("#requireEndTime").slideUp("normal");
+        jq$("#illegalTimeRange").slideUp("normal");
+    }
+
+    function displayMultipleDateRequireErrorMessage() {
+        jq$("#requireMultiDate").slideDown("normal");
+    }
+
+    function displayMultiDateFormatErrorMessage() {
+        jq$("#irregularMultiDate").slideDown("normal");
+    }
+
+    function displayMultiDateDuplicateErrorMessage(date) {
+        jq$("#duplicateDateString").empty().append(date);
+        jq$("#duplicateMultiDate").slideDown("normal");
+    }
+
+    
+    function hideMultiDateErrorMessage() {
+        jq$("#requireMultiDate").slideUp("normal");
+        jq$("#irregularMultiDate").slideUp("normal");
+        jq$("#duplicateMultiDate").slideUp("normal");
+    }
+
+    function displayTodoDateRequireErrorMessage() {
+        jq$("#requireTodoDate").slideDown("normal");
+    }
+
+    function displayTodoDateFormatErrorMessage() {
+        jq$("#irregularTodoDate").slideDown("normal");
+    }
+
+    
+    function hideTodoDateErrorMessage() {
+        jq$("#requireTodoDate").slideUp("normal");
+        jq$("#irregularTodoDate").slideUp("normal");
+    }
+    
+    function displayPlaceLengthErrorMessage(bool) {
+        if (bool) {
+            jq$("#tooMuchPlaceLength").slideDown("normal");
+        } else {
+            jq$("#tooMuchPlaceLength").slideUp("normal");
+        }
+    }
+
+    function setAttrAndClass() {
+        jq$("#memberSelectBox option, #targetSelectBox option").each(function(){
+            jq$(this).attr("title", jq$(this).text());
+        });
+        if (false) {
+            jq$("#memberSelectBox option, #targetSelectBox option").each(function(){
+                jq$(this).addClass('ellipsisStyle');
+            });
+        } else if (false || false) {
+            displayText(); 
+        } else {
+            setOptionWidth();
+        }
+    }
+
+    function setOptionWidth(){
+        jq$("body").append("<span id='tempSpan' style='visibility: hidden;font-family:Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;font-size:1.0em;'></span>");
+        var span = jq$("#tempSpan");
+        jq$("#memberSelectBox option, #targetSelectBox option").each(function(){
+            var txt = jq$(this).text();
+            span.text(txt);
+            var txtWidth = span.width();
+            jq$(this).css("width", txtWidth+"px");
+        });
+        span.remove();
+    }
+
+    function getNewTxt(span,txtVal,selWidth){
+        span.text(txtVal);
+        var txtWidth = span[0].offsetWidth;
+        span.text("");
+        if(txtWidth > selWidth){
+             txtVal = txtVal.substring(0, txtVal.length - 1);
+            return getNewTxt(span,txtVal,selWidth);
+        } else {
+            return txtVal;
+        }
+    }
+    function displayText(){
+        jq$("body").append("<span id='tempSpan' style='visibility: hidden;'></span>");
+        var span = jq$("#tempSpan");
+        var selWidth = 290;
+
+        if(false){
+            selWidth = 320;
+        }
+
+        jq$("#memberSelectBox option, #targetSelectBox option").each(function(){
+            var txt = jq$(this).text().trim();
+            var newTxt = getNewTxt(span,txt,selWidth);
+            if(txt != newTxt){
+                jq$(this).text(newTxt.trim() + "...");
+            }
+        });
+        span.remove();
+    }
+//-->
+</script>
+
+
+<div id="commentDialog" style="display: none">
+  <div class="caption" style="margin-top: -10px">
+    <div style="padding-top: 0px; text-align: left">
+
+
+
+
+
+    
+    
+</div>
+  </div>
+  <div id="requireGroup" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">グループは必ず入力してください。</span>
+  </div>
+  <div id="requireTitle" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">件名は必ず入力してください。</span>
+  </div>
+  <div id="tooMuchTitleLength" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">件名は50文字以内で入力してください。</span>
+  </div>
+  <div id="tooMuchNaiyoLength" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">詳細は500文字以内で入力してください。</span>
+  </div>
+  <div id="illegalDateRange" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">日付の範囲指定が不正です。</span>
+  </div>
+  <div id="requireStartDate" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">開始日は必ず入力してください。</span>
+  </div>
+  <div id="irregularStartDate" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">開始日の日付入力形式が正しくありません。</span>
+  </div>
+  <div id="requireMultiDate" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">日付は必ず入力してください。</span>
+  </div>
+  <div id="irregularMultiDate" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">日付入力形式が正しくありません。</span>
+  </div>
+  <div id="duplicateMultiDate" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" id="duplicateDateMsg" style="color:red;">
+      日付の指定
+      <span id="duplicateDateString"></span>
+      が重複しています。
+    </span>
+  </div>
+  <div id="illegalTimeRange" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">時間の範囲指定が不正です。</span>
+  </div>
+  <div id="requireStartTime" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">開始時間は必ず入力してください。</span>
+  </div>
+  <div id="requireEndDate" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">終了日は必ず入力してください。</span>
+  </div>
+  <div id="irregularEndDate" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">終了日の日付入力形式が正しくありません。</span>
+  </div>
+  <div id="requireEndTime" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">終了時間は必ず入力してください。</span>
+  </div>
+  <div id="requireTodoDate" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">期日は日付のみまたは日付と時間を入力してください。</span>
+  </div>
+  <div id="irregularTodoDate" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">日付入力形式が正しくありません。</span>
+  </div>
+  <div id="tooMuchPlaceLength" class="caption" style="display: none; text-align: left; margin-top: -5px; margin-bottom: 5px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4" style="color:red;">場所は50文字以内で入力してください。</span>
+  </div>
+  <div class="caption" style="text-align: left; margin-top: -5px; margin-bottom: 15px; margin-left: 10px;">
+    <span class="image"></span>
+    <span class="h4 line4">
+      スケジュール情報を入力して下さい。（<span style="color: red">*</span>&nbsp;<span>の項目は必須です。）</span>
+    </span>
+  </div>
+
+  <table class="detail" id="tourokuSyubetsuForm" style="margin: 0px 0px 0px 18px; border-bottom: 0pt;">
+  
+  
+    
+  </table>
+
+  
+  <div id="groupBlock">
+    <table class="detail" id="groupForm" style="margin: 0px 0px 0px 18px; border-top: 0pt; border-bottom: 0pt;">
+      <tbody><tr id="groupBlockLine">
+        <td class="line_x" colspan="3"></td>
+      </tr>
+      <tr>
+        <td class="label_accent">&nbsp;グループ名<span style="color: red">*</span></td>
+        <td class="line_y_label_accent"></td>
+        <td class="item">
+          
+            
+            
+              <select name="value(grpsdCd)" onchange="findGrpcdMembers();" id="grpsdCdCombo" style="margin-left:0px;"><option value=""></option></select>
+            
+          
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+
+  <table class="detail" id="contentsForm" style="margin: 0px 0px 0px 18px; border-top: 0pt; border-bottom: 0pt;">
+    
+    <tbody><tr id="contentsBlockLine">
+      <td class="line_x" colspan="3"></td>
+    </tr>
+    <tr>
+      <td class="label_accent">&nbsp;タイトル <span style="color: red">*</span></td>
+      <td class="line_y_label_accent"></td>
+      <td class="item"><input type="text" name="value(title)" maxlength="200" size="50" value="" onkeyup="displayTitleErrorMessage();" id="titleText"> <br>
+      (50文字以内で入力してください。)</td>
+    </tr>
+    <tr>
+      <td class="line_x" colspan="3"></td>
+    </tr>
+    
+    <tr>
+      <td class="label">&nbsp;内容</td>
+      <td class="line_y_label"></td>
+      <td class="item">
+        <textarea name="value(naiyo)" rows="3" onkeyup="displayNaiyoLengthErrorMessage();" id="naiyoText" style="margin-left: 0px; width: 98%"></textarea>
+        (500文字以内で入力してください。)
+      </td>
+    </tr>
+  </tbody></table>
+
+
+  <div id="timePlaceBlock">
+    <table class="detail" id="timePlaceForm" style="margin: 0px 0px 0px 18px; border-top: 0pt;">
+      <tbody><tr>
+        <td class="line_x" colspan="3"></td>
+      </tr>
+      <tr>
+        <td class="label_accent">&nbsp;日時
+          <span style="color: red">*</span>
+        </td>
+        <td class="line_y_label_accent"></td>
+        <td class="item">
+        <div class="cell">
+          <input type="radio" name="value(multiflg)" value="2" onclick="changeFromTo(); hideMultiDateErrorMessage(); hideStartTimeErrorMessage(); hideEndTimeErrorMessage();" id="fromtoRadioBtn">
+          範囲指定 &nbsp;&nbsp;&nbsp;
+          <input type="radio" name="value(multiflg)" value="1" onclick="changeMulti(); hideStartDateErrorMessage(); hideEndDateErrorMessage(); hideStartTimeErrorMessage(); hideEndTimeErrorMessage();" id="multiflgRadioBtn">
+          複数日指定
+        </div>
+        <br>
+        <hr style="margin: -10px 0px 10px 0px">
+
+        
+        <div class="cell" id="fromToBlock">
+          <input type="text" name="value(schedyFStr)" size="13" value="" id="date-pick1" class="hasDatepicker">
+          <input type="text" name="value(schtmhFStr)" size="5" value="" id="time-pick1" autocomplete="OFF"> ～
+          <input type="text" name="value(schedyTStr)" size="13" value="" id="date-pick2" class="hasDatepicker">
+          <input type="text" name="value(schtmhTStr)" size="5" value="" id="time-pick2" autocomplete="OFF">
+          <input type="checkbox" name="value(syjitflg)" value="1" onclick="syjitflgCeckBox(); hideStartTimeErrorMessage(); hideEndTimeErrorMessage();" id="timeall1">
+          終日
+        </div>
+        
+        <div class="cell" id="multiBlock" style="display: none">
+          <input type="text" name="value(schedyMultiStr)" size="40" value="" id="date-pick-multi" class="hasDatepicker">
+            <font id="time-nami1">
+              <input type="text" name="value(schtmhFMultiStr)" size="5" value="" id="time-pick3" autocomplete="OFF">
+              <font id="time-nami1">
+                ～
+              </font>
+              <input type="text" name="value(schtmhTMultiStr)" size="5" value="" id="time-pick4" autocomplete="OFF">
+            </font>
+            <input type="checkbox" name="value(syjitMultiflg)" value="1" onclick="syjitflgCeckBoxMulti(); hideStartTimeErrorMessage(); hideEndTimeErrorMessage();" id="timeall2">
+            終日
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="line_x" colspan="3"></td>
+      </tr>
+      
+      <tr>
+        <td class="label">&nbsp;場所</td>
+        <td class="line_y_label"></td>
+        <td class="item"><input type="text" name="value(place)" size="40" value="" onkeyup="displayPlaceLengthErrorMessage();" id="placeText"> <br>
+          (50文字以内で入力してください。)
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+
+  
+  <div id="koukaiKubunBlock">
+    
+  </div>
+
+  
+  <div id="todoBlock" style="display: none">
+    <table class="detail noEffectFormTop" id="todoForm" style="margin: 0px 0px 0px 18px; border-top: 0pt;">
+      <tbody><tr>
+        <td class="line_x" colspan="3"></td>
+      </tr>
+      
+      <tr>
+        <td class="label">&nbsp;期日</td>
+        <td class="line_y_label"></td>
+        <td class="item"><input type="text" name="value(schedyTStr)" size="13" value="" id="date-pick3" class="hasDatepicker">&nbsp;&nbsp; <input type="text" name="value(schtmhTStr)" size="5" value="" id="time-pick5" autocomplete="OFF"></td>
+      </tr>
+      
+      
+    </tbody></table>
+  </div>
+
+  
+  <div id="groupMemberBlock">
+    <table class="detail  noEffectFormTop" id="grpcdMemberList" style="margin: 0px 0px 0px 18px;">
+      <tbody><tr>
+        <td style="white-space: nowrap;text-align: left">
+          <table style="border-top: #6d584e 1pt solid; border-right: #6d584e 1pt solid;border-left: #6d584e 1pt solid;; margin-left: -8px; width:340px">
+            <tbody><tr>
+              <td class="label_nodot" style="background: #F7E3DF; text-align: center">&nbsp;グループメンバー一覧</td>
+            </tr>
+          </tbody></table>
+
+          <table>
+            <tbody><tr>
+              <td style="padding: 0px 0px 2px 5px;">
+                <select id="memberSelectBox" name="memberBox" size="15" multiple="multiple" style="overflow-x:scroll; width: 340px; margin-left: -15px; margin-top: -2px; border: #6d584e 1pt solid; font-family:Trebuchet MS, Tahoma, Verdana, Arial, sans-serif; height:19.4em;">
+                  
+                </select>
+                <select id="evacuateSelectBox" name="evacuateBox" multiple="multiple" style="display:none;">
+                </select>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+        <td style="white-space: nowrap; width: 4%">
+          <div class="function_bottom" style="margin:-8px -7px 5px -28px">
+            <input id="selectAllButton" type="button" onclick="selectAll()" value="全対象" class="next decorate" style="width: 95px;"> <br>
+            <br>
+            <input id="selectButton" type="button" onclick="selectMember()" value="対象" class="next decorate" style="width: 95px;"> <br>
+            <br>
+            <input id="dropButton" type="button" onclick="dropTarget()" value="非対象" class="prev decorate" style="width: 95px;"> <br>
+            <br>
+            <input id="dropAllButton" type="button" onclick="dropAll()" value="全非対象" class="prev decorate" style="width: 95px;"> <br>
+          </div>
+        </td>
+        <td style="white-space: nowrap;text-align: left; padding:0px 0px 0px 10px">
+          <table style="border-top: #6d584e 1pt solid; border-right: #6d584e 1pt solid;border-left: #6d584e 1pt solid;margin-left: -8px; width:340px;">
+            <tbody><tr>
+              <td class="label_nodot" style="background: #F7E3DF; text-align: center">&nbsp;対象者一覧</td>
+            </tr>
+          </tbody></table>
+
+          <table>
+            <tbody><tr>
+              <td style="padding: 0px 0px 2px 5px;">
+                <select id="targetSelectBox" name="targetBox" size="15" multiple="multiple" style="overflow-x:scroll; width: 340px; margin-left: -15px; margin-top: -2px; border: #6d584e 1pt solid;font-family:Trebuchet MS, Tahoma, Verdana, Arial, sans-serif; height:19.4em;">
+                  
+                </select>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <div class="function_bottom" style="text-align:left;margin-top:-18px">
+            <input id="keywordSearchForm" type="text" size="45">
+            <input id="clearButton" type="button" value="クリア" class="clear decorate" style=";margin-left:10px;margin-bottom:-6px;" onclick="evacuateMemberRestitution('true')"><br>
+            (入力キーワードの部分一致で検索します。)
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+  
+  
+  <div class="contents_1">
+    <div class="function_bottom">
+      <table class="list" style="margin: 0px 0px 0px 0px; width: 100%">
+        <tbody><tr class="button">
+          
+          
+          <td style="background: none">
+            
+            
+              <div style="margin-left: 260px; text-align: center;">
+                <input class="close decorate" type="button" value="閉じる">
+              </div>
+            
+            
+            
+          </td>
+          <td style="background: none">
+            <div style="margin-right: 16px; text-align: right">
+              
+              
+              
+                <input onclick="createSdsyoFromPortlet();" class="entry decorate" type="button" value="登録する">
+              
+              
+              
+            </div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+  </div>
+</div>
+
+
+<div id="commentDialog2" style="display: none"><br>
+  
+    
+    
+    
+    
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="contents_1">
+  
+    <table class="detail" style="margin: 0px 0px 0px 18px;">  
+      
+      
+      
+      <tbody><tr>
+        <td class="label" style="white-space: nowrap; width: 20%">&nbsp;タイトル</td>
+        <td class="line_y_label"></td>
+        <td class="item">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="line_x" colspan="3"></td>
+      </tr>
+      
+      
+      
+      <tr>
+        <td class="label" style="white-space: nowrap; width: 20%">&nbsp;内容</td>
+        <td class="line_y_label"></td>
+        <td class="item"></td>
+      </tr>
+      <tr>
+        <td class="line_x" colspan="3"></td>
+      </tr>
+      
+      <tr>
+        
+         
+          <td class="label" style="white-space: nowrap; width: 20%">&nbsp;日時</td>
+        
+        <td class="line_y_label"></td>
+        <td class="item"></td>
+      </tr>
+      <tr>
+        <td class="line_x" colspan="3"></td>
+      </tr>
+      
+      <tr>
+        <td class="label" style="white-space: nowrap; width: 20%">&nbsp;場所</td>
+        <td class="line_y_label"></td>
+        <td class="item"></td>
+      </tr>
+      
+      
+    </tbody></table>
+  
+  <div class="contents_1">
+    <div class="function_bottom">
+      <table class="list" style="margin: 0px 0px 0px 0px; width: 100%">
+        <tbody><tr class="button">
+          <td style="background: none">
+            <div style="margin-left: 0px; text-align: center"><input type="button" value="閉じる" class="close decorate" id="floatclose"></div>
+          </td>
+        </tr>
+     </tbody></table>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+    
+    
+     <div id="jikanwariDialog1" style="display:none;">
+       <span id="resultJikanTableBody">
+       </span>
+     </div>
+
+    
+    <div id="sdwrScheduleDialog1" style="display:none;">
+      <span id="resultSdwrScheduleTableBody"></span>
+    </div>
+     
+  </div>
+
+<input type="hidden" value="dummy" name="dummy" id="selectButtonName">
+<input type="hidden" name="value(clndCd)" value="" id="clndCdId">
+<input type="hidden" name="value(hyojikn)" value="" id="hyojikn">
+<input type="hidden" name="value(sdsyoIds)" value="" id="sdsyoIds">
+<input type="hidden" name="value(privateflg)" value="" id="privateflg">
+<input type="hidden" name="value(title)" value="" id="_title">
+<input type="hidden" name="value(naiyo)" value="" id="_naiyo">
+<input type="hidden" name="value(schedyFStr)" value="" id="_schedyFStr">
+<input type="hidden" name="value(schtmhFStr)" value="" id="_schtmhFStr">
+<input type="hidden" name="value(schedyTStr)" value="" id="_schedyTStr">
+<input type="hidden" name="value(schtmhTStr)" value="" id="_schtmhTStr">
+<input type="hidden" name="value(schedyMultiStr)" value="" id="_schedyMultiStr">
+<input type="hidden" name="value(schtmhFMultiStr)" value="" id="_schtmhFMultiStr">
+<input type="hidden" name="value(schtmhTMultiStr)" value="" id="_schtmhTMultiStr">
+<input type="hidden" name="value(syjitMultiflg)" value="" id="_syjitMultiflg">
+<input type="hidden" name="value(place)" value="" id="_place">
+<input type="hidden" name="value(todoflg)" value="" id="_todoflg">
+<input type="hidden" name="value(multiflg)" value="" id="_multiflg">
+<input type="hidden" name="value(sdsyoId)" value="" id="_sdsyoId">
+<input type="hidden" name="value(syjitflg)" value="" id="_syjitflg">
+<input type="hidden" name="value(doneflg)" value="" id="_doneflg">
+<input type="hidden" name="value(updatetype)" value="" id="updatetype">
+<input type="hidden" name="value(startday)" value="" id="startday">
+<input type="hidden" name="value(selectbutton)" value="" id="selectbutton">
+<input type="hidden" name="value(groupkokaiflg)" value="" id="_groupkokaiflg">
+<input type="hidden" name="value(kjnschkn)" value="" id="_kjnschkn">
+<input type="hidden" name="value(targetIds)" value="" id="_targetIds">
+</form>
+
+<script language="JavaScript" type="text/JavaScript" src="js/wbase/wbassdwr.js"></script>
+
+      </div>
+      <br class="clear">
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <div id="box_r0" class="portletArea">
+        
+          
+            
+            
+              
+            
+                        
+            <div id="box_r0_c0" class="box_a_harf">
+              
+                <div id="box_r0_c0_0" class="box_inner">
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="./css/wbase/jikanwari_arrow.css" type="text/css" media="screen" charset="utf-8">
+<!--[if IE 8 ]>
+<link rel="stylesheet" href="./css/wbase/jikanwari_arrow_ie8.css" type="text/css" media="screen" charset="utf-8"/>
+<![endif]-->
+
+
+
+
+
+
+<style type="text/css">
+.leftArrow {
+  position: relative;
+  width:2px;
+  height:76px;
+  right:-80px;
+  opacity:0.35;
+  margin-left:300px;
+  background-color:#256ee3
+}
+
+.leftArrow:before{
+    content: "";
+    position: absolute;
+    border-top: 38px solid transparent;
+    border-bottom: 38px solid transparent;
+    border-right: 12px solid #256ee3;
+    border-left: 12px solid transparent;
+    right: 2px;
+}
+
+.leftArrow:after{
+    content: "";
+    position: absolute;
+    border-width: 38px 12px 38px 12px;
+    border-style: solid;
+    border-color: #256ee3 transparent #256ee3 #256ee3;
+    left: 2px;
+}
+
+</style>
+
+<div class="canceled_class" id="prtlkoprInf">
+  <form name="portletForm" id="koprForm" method="post" action="/portal/prtlkopr.do" style="position: static; zoom: 1;">
+    <input type="hidden" name="buttonName" value="">
+<input type="hidden" name="timestamp" value="1757169826193">
+<input type="hidden" name="contenam" value="prtlkopr">
+
+
+    
+    <div class="separate_s">
+    </div>
+    <div class="title">
+      <table>
+        <tbody><tr>
+          <td style="text-indent:14px;"><b>講義のお知らせ</b></td>
+          <td>
+            <div style="text-align:right">
+              
+                <input type="button" id="canceled_wide" class="wide">
+              
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="font-size:0.8em;text-align:right;padding-top:3px;text-indent:0"><span>上段:<img src="./img/design01/ico_kyu.png" alt="休" class="icon" width="16" height="16"><img src="./img/design01/ico_ho.png" alt="補" class="icon" width="16" height="16"><img src="./img/design01/ico_hen.png" alt="変" class="icon" width="16" height="16"><img src="./img/design01/ico_jyu.png" alt="授" class="icon" width="16" height="16">下段:<img src="./img/design01/ico_ren.png" alt="連" class="icon" width="16" height="16"><img src="./img/design01/ico_ka.png" alt="課" class="icon" width="16" height="16"></span></td>
+        </tr>
+      </tbody></table>
+    </div>
+    <div class="inner" id="PrtlKoprPortlet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+        <div class="clear">
+          講義のお知らせはありません。
+        </div>
+      
+      
+      
+      <p class="view">
+        <a id="showAll" href="prtlkopr.do?contenam=prtlkopr&amp;buttonName=showAll"></a>
+      </p>
+
+
+      </div>
+    <div class="separate_e" style="bottom: -15px;"></div>
+
+    
+    <div id="detailKoprDialog" style="display:none;">
+      <span id="resultKoprTableBody">
+      </span>
+    </div>
+    
+    <input type="hidden" name="value(koprMessgId)" value="" id="koprMessgId">
+    <input type="hidden" name="value(koprCommentData)" value="" id="koprCommentData">
+
+    <div id="koprCmtDialog" style="display: none">
+      
+
+
+
+
+
+
+
+<div class="contents_1">
+  <div class="caption">
+    <table style="margin:0px;padding:0px;width:100%">
+      <tbody><tr id="koprLenErrMsgTagHeader" style="display:none;">
+        <td style="text-align:left;width:70%">
+          <span class="image" style="margin-top:0px;">
+          </span>
+          <span class="h4 line4" style="color:red" id="lenkoprerrormsg">
+          </span>
+        </td>
+      </tr>
+      <tr id="koprInvlidErrMsgTagHeader" style="display:none;">
+        <td style="text-align:left;width:70%">
+          <span class="image" style="margin-top:0px;">
+          </span>
+          <span class="h4 line4" style="color:red" id="invlidkoprerrormsg">
+          </span>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+<div class="contents_1" style="margin:0px 0px 0px 18px;">
+  <textarea id="koprmssgcmnt" rows="6" style="width:98%"></textarea>
+  <div style="text-align:left;">
+    &nbsp;&nbsp;(200文字以内で入力してください。)
+  </div>
+</div>
+<div class="contents_1">
+  <div class="function_bottom">
+    <table class="list" style="margin:0px 0px 0px 0px;width:100%">
+      <tbody><tr class="button">
+        <td style="background:none">
+          <div style="margin-left:160px;text-align:center">
+            <input type="button" id="commentkoprDialog_close" value="閉じる" class="close decorate">
+          </div>
+        </td>
+        <td id="koprCmtInsBtnTagHeader" style="background:none;display:none">
+          <div style="margin-right:-7px;text-align:right">
+            <input type="button" class="entry decorate" value="登録する" id="insertkoprButton" onclick="updateKoprCmntData();">
+          </div>
+        </td>
+        <td id="koprCmtUpdBtnTagHeader" style="background:none;display:none">
+          <div style="margin-right:-7px;text-align:right">
+            <input type="button" class="entry decorate" value="更新する" id="updatekoprButton" onclick="updateKoprCmntData();">
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+
+    </div>
+  </form>
+</div>
+
+<script type="text/javascript">
+  var prtlkoprTimestamp = "1757169826193";
+  var prtlkoprRrequestURL = "prtlkopr.do";
+  var prtlkoprDesign = "design01";
+  var prtlkoprDetailTitle = "詳細情報";
+  var prtlkoprKyukou = "11";
+  var prtlkoprHokou = "12";
+  var prtlkoprJikanwari = "13";
+  var prtlkoprKougi = "14";
+  var prtlkoprReport = "15";
+  var prtlkoprJyugyou = "16";
+  var prtlkoprCommentInsertButton = "コメントを登録する";
+  var prtlkoprCommentEntryDay = "コメント登録日：";
+  var prtlkoprUpdateCommentButton = "コメントを更新する";
+</script>
+<script language="JavaScript" type="text/JavaScript" src="js/prtal/prtlkopr.js"></script>
+
+
+                </div>
+              
+                <div id="box_r0_c0_1" class="box_inner">
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  <!--
+    var wbasopprTimestamp = "1757169826193";
+    var wbasopprRrequestURL = "wbasoppr.do";
+    var wbasopprDesign = "design01";
+    var wbasopprDetailTitle = "メッセージ詳細";
+    var wbasopprCommentInsertButton = "コメントを登録する";
+    var wbasopprCommentEntryDay = "コメント登録日：";
+    var wbasopprUpdateCommentButton = "コメントを更新する";
+  
+    // フロートオープン
+    function openOpprFloat(index, messgid) {
+      var requestURL = wbasopprRrequestURL;
+      var param = {
+      'value(opprMessgId)' : messgid,
+      'timestamp': wbasopprTimestamp,
+      'buttonName': 'showOpprFloat'
+      };
+      // 太文字 ＞ 細文字
+      document.getElementById('readDyOpprTagHeader'+index).style.fontWeight = "normal";
+      document.getElementById('readLinkOpprTagHeader'+index).style.fontWeight = "normal";
+      var scrollValues = new Array(document.documentElement.scrollLeft, document.documentElement.scrollTop);
+      ajaxRequest(requestURL, param, loadOpprDetail, "detailOpprDialog", scrollValues);
+    }
+  
+    function loadOpprDetail(data) {
+      jq$("#resultOpprTableBody").empty().append(data);
+      openFloatDialog("#detailOpprDialog", '831px', wbasopprDetailTitle);
+    }
+    
+    // コメントフロート項目変更
+    function openOpprCmntDialog( messgId , btnFlg) {
+      // エラーメッセージ取り消し
+      errorOpprHeaderNone();
+      // 登録、更新ボタン切り替え
+      if (btnFlg) {
+        document.getElementById('opprCmtUpdBtnTagHeader').style.display = "block";
+        document.getElementById('opprCmtInsBtnTagHeader').style.display = "none";
+      } else {
+        document.getElementById('opprCmtUpdBtnTagHeader').style.display = "none";
+        document.getElementById('opprCmtInsBtnTagHeader').style.display = "block";
+      }
+      $("opprMessgId").value = messgId;
+    }
+    
+    // コメントフロート項目変更（二回目以降）
+    function openOpprCmntDialogAfter(messgId , btnFlg) {
+      // エラーメッセージ取り消し
+      errorOpprHeaderNone();
+      // 登録、更新ボタン切り替え
+      if (document.getElementById('opprMssgCmnt').value != "") {
+        document.getElementById('opprCmtUpdBtnTagHeader').style.display = "block";
+        document.getElementById('opprCmtInsBtnTagHeader').style.display = "none";
+      } else {
+        document.getElementById('opprCmtUpdBtnTagHeader').style.display = "none";
+        document.getElementById('opprCmtInsBtnTagHeader').style.display = "block";
+      }
+      $("opprMessgId").value = messgId;
+    }
+    
+    // コメント更新
+    function updateOpprCmntData (){
+      var requestURL = wbasopprRrequestURL;
+      var param = {
+      'value(opprCommentData)': document.getElementById('opprMssgCmnt').value,
+      'value(opprMessgId)' : document.getElementById('opprMessgId').value ,
+      'timestamp': wbasopprTimestamp,
+      'buttonName': 'updateOpprFloat'
+      };
+      ajaxRequest(requestURL, param, loadOpprComment, "opprCmtDialog");
+    }
+
+    function loadOpprComment(data) {
+      // エラーメッセージ取り消し
+      errorOpprHeaderNone();
+      // JSONデータ取得
+      try {
+          var response = eval("("+data+")");
+      } catch(e) {
+          jq$("#opprCmtDialog").empty().append(data);
+          return;
+      }
+      var errFlg = response.dataMap.errorflg;
+      var mssgcmnt = response.dataMap.opprMssgCmnt;
+      var opprcmmntdy = response.dataMap.opprCmmntDy;
+      // コメントを閉じる後再表示用にHiddenに退避
+      $("opprCommentData").value = mssgcmnt;
+      if (errFlg == true) {
+        // エラーの場合
+        var lenerr = response.dataMap.lengtherror;
+        if (lenerr != undefined) {
+          document.getElementById('opprLenErrMsgTagHeader').style.display = "block";
+          document.getElementById('lenopprerrormsg').innerHTML = lenerr;
+        }
+        var invliderr = response.dataMap.invalidlenamchar;
+        if (invliderr != undefined) {
+          document.getElementById('opprInvlidErrMsgTagHeader').style.display = "block";
+          document.getElementById('invlidopprerrormsg').innerHTML = invliderr
+        }
+      } else {
+        // 正常終了（詳細フロート書き換え）
+        jq$("#opprCmtDialog").dialog('close');
+        if(mssgcmnt == ""){
+          $('resultCmntOpprTableBody').innerHTML = "<span class='function_bottom' >" +
+          "<input type='button' class='run decorate' name='detail' value='" +
+          wbasopprCommentInsertButton +
+          "' onclick='afterShowOpprCommentFloat();' />" +
+          "</span>";
+        } else {
+          // 特殊文字列のエスケープ処理
+          mssgcmnt = mssgcmnt.escapeHTML();
+          // 改行文字列の置換
+          mssgcmnt = mssgcmnt.replace(/\r\n/g, "<br>");
+          mssgcmnt = mssgcmnt.replace(/(\n|\r)/g, "<br>");
+          // 更新したコメントを再描画
+          $('resultCmntOpprTableBody').innerHTML = mssgcmnt +
+          "<br><font color='red'>" +
+          wbasopprCommentEntryDay +
+          opprcmmntdy +
+          "</font><br>" +
+          "<span class='function_bottom' >" +
+          "<input type='button' class='run decorate' name='detail' " +
+          "value='"+ wbasopprUpdateCommentButton +
+          "' onclick='afterShowOpprCommentFloat();' />" +
+          "</span>";
+        }
+        document.getElementById('opprMssgCmnt').value = mssgcmnt;
+      }
+    }
+    function errorOpprHeaderNone(){
+      document.getElementById('opprLenErrMsgTagHeader').style.display = "none";
+      document.getElementById('opprInvlidErrMsgTagHeader').style.display = "none";
+    }
+  //-->
+</script>
+
+<div class="personal_inf" id="wbasopprInf">
+  <form name="portletForm" id="opprForm" method="post" action="/portal/wbasoppr.do" style="position: static; zoom: 1;">
+    <input type="hidden" name="buttonName" value="">
+<input type="hidden" name="timestamp" value="1757169826193">
+<input type="hidden" name="contenam" value="wbasoppr">
+
+
+    
+    <div class="separate_s">
+    </div>
+    <div class="title">
+      <table>
+        <tbody><tr>
+          <td style="text-indent:14px;">
+            <b>
+              あなたあてのお知らせ
+            </b>
+          </td>
+          <td>
+            <div style="text-align:right">
+              
+                <input type="button" class="wide" id="personal_wide">
+              
+            </div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+    
+    <div class="inner">
+      <div id="WbasOpprPortlet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      <div class="its_new">
+        <span class="style">
+          1
+          件
+        </span>
+        の新着
+        <span class="image">
+        </span>
+      </div>
+      
+        
+        
+          <div class="clear">
+          </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOpprTagHeader0" style="font-weight: bold;">
+                    9/5 (金) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+                  <img src="./img/design01/ico_new.png" alt="NEW" class="icon">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOpprTagHeader0" style="font-weight: bold;">
+                  <a href="javascript:void(0)" id="link_0" onclick="openOpprFloat(0,979315,false);return false;">
+                    <font color="red">
+                      
+                    </font>
+                    
+                    【発展FS】後期エントリー開始のお知らせ（Googleフォーム 9/5～9/9  23時59分まで）
+                  </a>
+                  </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOpprTagHeader1" style="font-weight: bold;">
+                    9/2 (火) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOpprTagHeader1" style="font-weight: bold;">
+                  <a href="javascript:void(0)" id="link_1" onclick="openOpprFloat(1,979047,false);return false;">
+                    <font color="red">
+                      
+                    </font>
+                    
+                    【9/5より受付開始！】発展FS（Ｒ７後期）プログラムエントリーのお知らせ
+                  </a>
+                  </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOpprTagHeader2" style="font-weight: bold;">
+                    9/2 (火) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOpprTagHeader2" style="font-weight: bold;">
+                  <a href="javascript:void(0)" id="link_2" onclick="openOpprFloat(2,979043,false);return false;">
+                    <font color="red">
+                      
+                    </font>
+                    
+                    入試アルバイト大募集！！（10/4,5）
+                  </a>
+                  </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOpprTagHeader3" style="font-weight: bold;">
+                    9/2 (火) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOpprTagHeader3" style="font-weight: bold;">
+                  <a href="javascript:void(0)" id="link_3" onclick="openOpprFloat(3,979036,false);return false;">
+                    <font color="red">
+                      
+                    </font>
+                    
+                    　【就職/参加必須】3(薬5)年生、修士1年生 後期就活スタートガイダンス（オンライン実施）
+                  </a>
+                  </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOpprTagHeader4" style="font-weight: bold;">
+                    9/1 (月) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOpprTagHeader4" style="font-weight: bold;">
+                  <a href="javascript:void(0)" id="link_4" onclick="openOpprFloat(4,978995,false);return false;">
+                    <font color="red">
+                      
+                    </font>
+                    
+                    【日本企業に就職を考えている留学生の方へ】2025年度後期 就職対策講座のご案内
+                  </a>
+                  </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOpprTagHeader5" style="font-weight: bold;">
+                    9/1 (月) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOpprTagHeader5" style="font-weight: bold;">
+                  <a href="javascript:void(0)" id="link_5" onclick="openOpprFloat(5,978988,false);return false;">
+                    <font color="red">
+                      
+                    </font>
+                    
+                    【締め切り延長！！】広報研修参加者募集！ ～PRのプロから教わる広報研修会のご案内～
+                  </a>
+                  </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOpprTagHeader6" style="font-weight: bold;">
+                    9/1 (月) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOpprTagHeader6" style="font-weight: bold;">
+                  <a href="javascript:void(0)" id="link_6" onclick="openOpprFloat(6,978942,false);return false;">
+                    <font color="red">
+                      
+                    </font>
+                    
+                    【イベントのお知らせ】有明・武蔵野学生相談室より
+                  </a>
+                  </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOpprTagHeader7" style="font-weight: bold;">
+                    9/1 (月) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOpprTagHeader7" style="font-weight: bold;">
+                  <a href="javascript:void(0)" id="link_7" onclick="openOpprFloat(7,978876,false);return false;">
+                    <font color="red">
+                      
+                    </font>
+                    
+                    【イベントのお知らせ】有明・武蔵野学生相談室より
+                  </a>
+                  </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOpprTagHeader8" style="font-weight: bold;">
+                    9/1 (月) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOpprTagHeader8" style="font-weight: bold;">
+                  <a href="javascript:void(0)" id="link_8" onclick="openOpprFloat(8,978572,false);return false;">
+                    <font color="red">
+                      
+                    </font>
+                    
+                    【就職】個室型ワークブース「テレキューブ」のお知らせ
+                  </a>
+                  </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOpprTagHeader9" style="font-weight: bold;">
+                    8/29 (金) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOpprTagHeader9" style="font-weight: bold;">
+                  <a href="javascript:void(0)" id="link_9" onclick="openOpprFloat(9,978748,false);return false;">
+                    <font color="red">
+                      
+                    </font>
+                    
+                    【障がいのある学生向け】就職支援情報等のご案内
+                  </a>
+                  </font>
+                
+                
+              </div>
+            </div>
+          
+        
+      
+        <p class="view">
+          <a id="showAll" href="wbasoppr.do?contenam=wbasoppr&amp;buttonName=showAll"></a>
+        </p>
+      </div>
+    </div>
+    
+    <div class="separate_e" style="bottom: -28px;">
+    </div>
+    <div id="detailOpprDialog" style="display:none;">
+      <span id="resultOpprTableBody">
+      </span>
+    </div>
+    <div id="opprCmtDialog" style="display: none">
+      
+
+
+
+
+
+
+
+<div class="contents_1">
+  <div class="caption">
+    <table style="margin:0px;padding:0px;width:100%">
+      <tbody><tr id="opprLenErrMsgTagHeader" style="display:none;">
+        <td style="text-align:left;width:70%">
+          <span class="image" style="margin-top:0px;">
+          </span>
+          <span class="h4 line4" style="color:red" id="lenopprerrormsg">
+          </span>
+        </td>
+      </tr>
+      <tr id="opprInvlidErrMsgTagHeader" style="display:none;">
+        <td style="text-align:left;width:70%">
+          <span class="image" style="margin-top:0px;">
+          </span>
+          <span class="h4 line4" style="color:red" id="invlidopprerrormsg">
+          </span>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+<div class="contents_1" style="margin:0px 0px 0px 18px;">
+  <textarea id="opprMssgCmnt" rows="6" style="width:98%"></textarea>
+  <div style="text-align:left;">
+    &nbsp;&nbsp;(200文字以内で入力してください。)
+  </div>
+</div>
+<div class="contents_1">
+  <div class="function_bottom">
+    <table class="list" style="margin:0px 0px 0px 0px;width:100%">
+      <tbody><tr class="button">
+        <td style="background:none">
+          <div style="margin-left:160px;text-align:center">
+            <input type="button" id="commentDialog_close" value="閉じる" class="close decorate">
+          </div>
+        </td>
+        <td id="opprCmtInsBtnTagHeader" style="background:none;display:none">
+          <div style="margin-right:-7px;text-align:right">
+            <input type="button" class="entry decorate" value="登録する" id="insertButton" onclick="updateOpprCmntData();">
+          </div>
+        </td>
+        <td id="opprCmtUpdBtnTagHeader" style="background:none;display:none">
+          <div style="margin-right:-7px;text-align:right">
+            <input type="button" class="entry decorate" value="更新する" id="updateButton" onclick="updateOpprCmntData();">
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+
+    </div>
+    <input type="hidden" value="dummy" name="dummy" id="selectButtonName">
+    <input type="hidden" name="value(opprCommentData)" value="" id="opprCommentData">
+    <input type="hidden" name="value(opprMessgId)" value="" id="opprMessgId">
+  </form>
+</div>
+
+<script language="JavaScript" type="text/JavaScript" src="js/wbase/wbasoppr.js"></script>
+
+                </div>
+              
+                <div id="box_r0_c0_2" class="box_inner">
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="JavaScript" type="text/JavaScript" src="./js/jquery.js"></script>
+<script type="text/javascript">var jq171 = $.noConflict(true);</script>
+
+<script type="text/javascript">
+<!--
+(function($) {
+  if ( window.XDomainRequest ) {
+    $.ajaxTransport(function( s ) {
+      if ( s.crossDomain && s.async ) {
+        if ( s.timeout ) {
+          s.xdrTimeout = s.timeout;
+          delete s.timeout;
+        }
+        var xdr;
+        return {
+          send: function( _, complete ) {
+            function callback( status, statusText, responses, responseHeaders ) {
+              xdr.onload = xdr.onerror = xdr.ontimeout = xdr.onprogress = $.noop;
+              xdr = undefined;
+              complete( status, statusText, responses, responseHeaders );
+            }
+            xdr = new XDomainRequest();
+            xdr.open( s.type, s.url );
+            xdr.onload = function() {
+              callback( 200, "OK", { text: xdr.responseText }, "Content-Type: " + xdr.contentType );
+            };
+            xdr.onerror = function() {
+              callback( 404, "Not Found" );
+            };
+            xdr.onprogress = function() {};
+            if ( s.xdrTimeout ) {
+              xdr.ontimeout = function() {
+                callback( 0, "timeout" );
+              };
+              xdr.timeout = s.xdrTimeout;
+            }
+            xdr.send( ( s.hasContent && s.data ) || null );
+          },
+          abort: function() {
+            if ( xdr ) {
+              xdr.onerror = $.noop();
+              xdr.abort();
+            }
+          }
+        };
+      }
+    });
+  }
+})( jq171 );
+//-->
+</script>
+
+<div class="coursepower_class">
+  <form name="portletForm" id="cpprForm" method="post" action="/portal/prtlcppr.do">
+    <input type="hidden" name="buttonName" value="">
+<input type="hidden" name="timestamp" value="1757169826193">
+<input type="hidden" name="contenam" value="prtlcppr">
+
+    
+    <div class="separate_s">
+    </div>
+    <div class="title">
+      <table>
+        <tbody><tr>
+          <td style="text-indent:14px;"><b>学修支援システムからのお知らせ</b></td>
+          <td>
+            <div style="text-align:right">
+              
+                <input type="button" id="coursepower_wide" class="wide">
+              
+            </div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+    
+    
+    
+    
+      <div class="inner">
+        <div id="cpprList"><style type="text/css">
+  .cp-info-type {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .cp-info-type:before {
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: ".";
+    zoom: 1;
+  }
+  .cp-info-type:after {
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: ".";
+    zoom: 1;
+  }
+  .cp-info-type li {
+    display: inline;
+  }
+  .cp-info-type-name {
+    float: left;
+    margin-top: 9px;
+    margin-left: 5px;
+  }
+  .cp-info-type-allinfo {
+    float: right;
+    margin-top: 9px;
+    margin-right: 12px;
+  }
+  .cp-info-type-msg {
+    margin: 5px 0 5px 18px;
+    padding:0;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .cp-info-type-msg:after {
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: ".";
+    zoom: 1;
+  }
+</style>
+
+<ul class="cp-info-type">
+    <li class="cp-info-type-allinfo">全 <span style="color:red;font-weight:bold;">11</span>件</li>
+      </ul>
+  <div class="cp-info-type-msg">
+    <a style="position:absolute;" href="https://cp.musashino-u.ac.jp/lms/ssoLogin/?SSO=834160e265aa1a2af40fb83ceece23a593038a362b8e2deb7ac33a2583cb7e45633c0e13b7705bea4c50810088c375ad6d8f288f252dd9efd13969b75efcabec3b53b2a2c8766826042fa2ba671e6357" target="coursepowerlink">教材の公開通知</a><br>
+    <a style="position:absolute;" href="https://cp.musashino-u.ac.jp/lms/ssoLogin/?SSO=834160e265aa1a2af40fb83ceece23a593038a362b8e2deb7ac33a2583cb7e45633c0e13b7705beac3cf4180d5a03ee1bce040d749a9af35d13969b75efcabec3b53b2a2c8766826042fa2ba671e6357" target="coursepowerlink">教材の公開通知</a><br>
+    <a style="position:absolute;" href="https://cp.musashino-u.ac.jp/lms/ssoLogin/?SSO=834160e265aa1a2af40fb83ceece23a593038a362b8e2deb7ac33a2583cb7e45633c0e13b7705bea45e7b942351f6e1946e02a9b750e781bd13969b75efcabec3b53b2a2c8766826042fa2ba671e6357" target="coursepowerlink">教材の公開通知</a><br>
+    <a style="position:absolute;" href="https://cp.musashino-u.ac.jp/lms/ssoLogin/?SSO=834160e265aa1a2af40fb83ceece23a593038a362b8e2deb7ac33a2583cb7e45633c0e13b7705bea3ee961461a9b4681374e7f613f93698ad13969b75efcabec3b53b2a2c8766826042fa2ba671e6357" target="coursepowerlink">教材の公開通知</a><br>
+    <a style="position:absolute;" href="https://cp.musashino-u.ac.jp/lms/ssoLogin/?SSO=834160e265aa1a2af40fb83ceece23a593038a362b8e2deb7ac33a2583cb7e45633c0e13b7705bea4d5dc2ed71566d2bf435f7f8ea984e28d13969b75efcabec3b53b2a2c8766826042fa2ba671e6357" target="coursepowerlink">教材の公開通知</a><br>
+    <a style="position:absolute;" href="https://cp.musashino-u.ac.jp/lms/ssoLogin/?SSO=834160e265aa1a2af40fb83ceece23a593038a362b8e2deb7ac33a2583cb7e45633c0e13b7705beae5c052dce1c730ad081284f7e3f64f57d13969b75efcabec3b53b2a2c8766826042fa2ba671e6357" target="coursepowerlink">教材の公開通知</a><br>
+    <a style="position:absolute;" href="https://cp.musashino-u.ac.jp/lms/ssoLogin/?SSO=834160e265aa1a2af40fb83ceece23a593038a362b8e2deb7ac33a2583cb7e45633c0e13b7705bea7d0ebe7aa96a82fb6e7630fd1ae355cbd13969b75efcabec3b53b2a2c8766826042fa2ba671e6357" target="coursepowerlink">教材の公開通知</a><br>
+    <a style="position:absolute;" href="https://cp.musashino-u.ac.jp/lms/ssoLogin/?SSO=834160e265aa1a2af40fb83ceece23a593038a362b8e2deb7ac33a2583cb7e45633c0e13b7705bea7d0ebe7aa96a82fbad8b9eb0b23666cdd13969b75efcabec3b53b2a2c8766826042fa2ba671e6357" target="coursepowerlink">受講者の皆さんよろしくお願いします。</a><br>
+    <a style="position:absolute;" href="https://cp.musashino-u.ac.jp/lms/ssoLogin/?SSO=834160e265aa1a2af40fb83ceece23a593038a362b8e2deb7ac33a2583cb7e45633c0e13b7705bea51203f754c75c9194251a108eddff07ad13969b75efcabec3b53b2a2c8766826042fa2ba671e6357" target="coursepowerlink">【重要】経営学入門　期末テストの試験方法について</a><br>
+    <a style="position:absolute;" href="https://cp.musashino-u.ac.jp/lms/ssoLogin/?SSO=834160e265aa1a2af40fb83ceece23a593038a362b8e2deb7ac33a2583cb7e45633c0e13b7705bea9aa36fc8d3ac9bc3ad18cb5629a14886d13969b75efcabec3b53b2a2c8766826042fa2ba671e6357" target="coursepowerlink">第１回 振り返りの提出について</a><br>
+    </div>
+  <div class="view"><a href="https://cp.musashino-u.ac.jp/lms/ssoLogin/?SSO=834160e265aa1a2af40fb83ceece23a593038a362b8e2deb7ac33a2583cb7e455a79fd24a43dfb73d13969b75efcabec2756fdaac86ef31eae4b7cb99b3670da" target="coursepowerlink"></a></div>
+  </div>
+      </div>
+    
+    <div class="separate_e">
+    </div>
+  </form>
+</div>
+
+<script type="text/javascript">
+<!--
+ if("https://cp.musashino-u.ac.jp/lms/homeIfcl/?PRM=c83633938e06db0435fcb3b999022bd5216cf647b07f9c88a1d48cc39b60949d548a0a02e12ca814" != null && "https://cp.musashino-u.ac.jp/lms/homeIfcl/?PRM=c83633938e06db0435fcb3b999022bd5216cf647b07f9c88a1d48cc39b60949d548a0a02e12ca814" != ""){
+   jq171.ajax({
+     url: 'https://cp.musashino-u.ac.jp/lms/homeIfcl/?PRM=c83633938e06db0435fcb3b999022bd5216cf647b07f9c88a1d48cc39b60949d548a0a02e12ca814',
+     type: 'GET',
+     dataType: 'html',
+     success: function(data) {
+       if(data == "" || data == null) {
+         jq171('#cpprList').empty().append("学修支援システムからのお知らせの取得先が見つかりません。");
+       } else {
+         jq171('#cpprList').empty().append(data);
+       }
+     },
+     error: function(data) {
+      jq171('#cpprList').empty().append("学修支援システムからのお知らせの取得先が見つかりません。");
+     }
+    });
+ }
+
+ function ajaxQuery(queryurl){
+   jq171.ajax({
+     url: queryurl,
+     type: 'GET',
+     dataType: 'html',
+     success: function(data) {
+       jq171('#cpprList').empty().append(data);
+     },
+     error: function(data) {
+       jq171('#cpprList').empty().append("学修支援システムからのお知らせの取得先が見つかりません。");
+     }
+   });
+ }
+//-->
+</script>
+
+                </div>
+              
+            </div>
+          
+        
+          
+            
+            
+              
+            
+                        
+            <div id="box_r0_c1" class="box_c_harf">
+              
+                <div id="box_r0_c1_0" class="box_inner">
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  <!--
+    var wbasoaprTimestamp = "1757169826193";
+    var wbasoaprRrequestURL = "wbasoapr.do";
+    var wbasoaprDesign = "design01";
+    var wbasoaprDetailTitle = "メッセージ詳細"
+    var wbasoaprCommentInsertButton = "コメントを登録する";
+    var wbasoaprCommentEntryDay = "コメント登録日：";
+    var wbasoaprUpdateCommentButton = "コメントを更新する";
+  
+    // フロートオープン
+    function openOaprFloat(index, messgid) {
+      var requestURL = wbasoaprRrequestURL;
+      var param = {
+      'value(oaprMessgId)' : messgid,
+      'timestamp': wbasoaprTimestamp,
+      'buttonName': 'showOaprFloat'
+      };
+      // 太文字 ＞ 細文字
+      document.getElementById('readDyOaprTagHeader'+index).style.fontWeight = "normal";
+      document.getElementById('readLinkOaprTagHeader'+index).style.fontWeight = "normal";
+      var scrollValues = new Array(document.documentElement.scrollLeft, document.documentElement.scrollTop);
+      ajaxRequest(requestURL, param, loadOaprDetail, "detailOaprDialog", scrollValues);
+    }
+
+    function loadOaprDetail(data) {
+      jq$("#resultOaprTableBody").empty().append(data);
+      openFloatDialog("#detailOaprDialog", '831px', wbasoaprDetailTitle);
+    }
+
+    // コメントフロート項目変更
+    function openOaprCmntDialog(messgId , btnFlg) {
+      // エラーメッセージ取り消し
+      errorOaprHeaderNone();
+      // 登録、更新ボタン切り替え
+      if (btnFlg) {
+        document.getElementById('oaprCmtUpdBtnTagHeader').style.display = "block";
+        document.getElementById('oaprCmtInsBtnTagHeader').style.display = "none";
+      } else {
+        document.getElementById('oaprCmtUpdBtnTagHeader').style.display = "none";
+        document.getElementById('oaprCmtInsBtnTagHeader').style.display = "block";
+      }
+      $("oaprMessgId").value = messgId;
+    }
+    
+    // コメントフロート項目変更（二回目以降）
+    function openOaprCmntDialogAfter(messgId , btnFlg) {
+      // エラーメッセージ取り消し
+      errorOaprHeaderNone();
+      // 登録、更新ボタン切り替え
+      if (document.getElementById('oaprMssgCmnt').value != "") {
+        document.getElementById('oaprCmtUpdBtnTagHeader').style.display = "block";
+        document.getElementById('oaprCmtInsBtnTagHeader').style.display = "none";
+      } else {
+        document.getElementById('oaprCmtUpdBtnTagHeader').style.display = "none";
+        document.getElementById('oaprCmtInsBtnTagHeader').style.display = "block";
+      }
+      $("oaprMessgId").value = messgId;
+    }
+    
+    // コメント更新
+    function updateOaprCmntData(){
+      var requestURL = wbasoaprRrequestURL;
+      var param = {
+      'value(oaprCommentData)': document.getElementById('oaprMssgCmnt').value,
+      'value(oaprMessgId)' : document.getElementById('oaprMessgId').value ,
+      'timestamp': wbasoaprTimestamp,
+      'buttonName': 'updateOaprFloat'
+      };
+      ajaxRequest(requestURL, param, loadOaprComment, "oaprCmtDialog");
+    }
+
+    function loadOaprComment(data) {
+      // エラーメッセージ取り消し
+      errorOaprHeaderNone();
+      // JSONデータ取得
+      try {
+          var response = eval("("+data+")");
+      } catch(e) {
+          jq$("#oaprCmtDialog").empty().append(data);
+          return;
+      }
+      var errFlg = response.dataMap.errorflg;
+      var mssgcmnt = response.dataMap.oaprMssgCmnt;
+      var cmmntdy = response.dataMap.oaprCmmntDy;
+      // コメントを閉じる後再表示用にHiddenに退避
+      $("oaprCommentData").value = mssgcmnt;
+      if (errFlg == true) {
+        // エラーの場合
+        var lenerr = response.dataMap.lengtherror;
+        if (lenerr != undefined) {
+          document.getElementById('oaprLenErrMsgTagHeader').style.display = "block";
+          document.getElementById('lenoparerrormsg').innerHTML = lenerr;
+        }
+        var invliderr = response.dataMap.invalidlenamchar;
+        if (invliderr != undefined) {
+          document.getElementById('oaprInvlidErrMsgTagHeader').style.display = "block";
+          document.getElementById('invlidoparerrormsg').innerHTML = invliderr
+        }
+      } else {
+        // 正常終了（詳細フロート書き換え）
+        jq$("#oaprCmtDialog").dialog('close');
+        if(mssgcmnt == ""){
+          $('resultCmntOaprTableBody').innerHTML = "<span class='function_bottom' >" +
+          "<input type='button' class='run decorate' name='detail' value='" +
+          wbasoaprCommentInsertButton +
+          "' onclick='afterShowOaprCommentFloat();' />" +
+          "</span>";
+        } else {
+          // 特殊文字列のエスケープ処理
+          mssgcmnt = mssgcmnt.escapeHTML();
+          // 改行文字列の置換
+          mssgcmnt = mssgcmnt.replace(/\r\n/g, "<br>");
+          mssgcmnt = mssgcmnt.replace(/(\n|\r)/g, "<br>");
+          // 更新したコメントを再描画
+          $('resultCmntOaprTableBody').innerHTML = mssgcmnt +
+          "<br><font color='red'>" +
+          wbasoaprCommentEntryDay +
+          cmmntdy +
+          "</font><br>" +
+          "<span class='function_bottom' >" +
+          "<input type='button' class='run decorate' name='detail' " +
+          "value='"+ wbasoaprUpdateCommentButton +
+          "' onclick='afterShowOaprCommentFloat();' />" +
+          "</span>";
+        }
+        document.getElementById('oaprMssgCmnt').value = mssgcmnt;
+      }
+    }
+    
+    function errorOaprHeaderNone(){
+      document.getElementById('oaprLenErrMsgTagHeader').style.display = "none";
+      document.getElementById('oaprInvlidErrMsgTagHeader').style.display = "none";
+    }
+  //-->
+</script>
+
+<div class="public_inf" id="wbaspoaprInf">
+  <form name="portletForm" id="oaprForm" method="post" action="/portal/wbasoapr.do" style="position: static; zoom: 1;">
+    <input type="hidden" name="buttonName" value="">
+<input type="hidden" name="timestamp" value="1757169826193">
+<input type="hidden" name="contenam" value="wbasoapr">
+
+
+    
+    <div class="separate_s">
+    </div>
+    <div class="title">
+      <table>
+        <tbody><tr>
+          <td style="text-indent:14px;">
+            <b>
+              大学からのお知らせ
+            </b>
+          </td>
+          <td>
+            <div style="text-align:right">
+              
+                <input type="button" class="wide" id="public_wide">
+              
+            </div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+
+    <div class="inner" id="WbasOaprPortlet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      <div class="its_new">
+        <span class="style">
+          5
+          件
+        </span>
+        の新着
+        <span class="image">
+        </span>
+      </div>
+      
+        
+        
+          <div class="clear">
+          </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOaprTagHeader0" style="font-weight: bold;">
+                    9/5 (金) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+                  <img src="./img/design01/ico_new.png" alt="NEW" class="icon">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOaprTagHeader0" style="font-weight: bold;">
+                   <a href="javascript:void(0)" id="link_0" onclick="openOaprFloat(0,979342,false);return false;">
+                     <font color="red">
+                       
+                     </font>
+                     
+                     【再々掲】９月 大募集　仏教ボランティア
+                   </a>
+                   </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOaprTagHeader1" style="font-weight: bold;">
+                    9/5 (金) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+                  <img src="./img/design01/ico_new.png" alt="NEW" class="icon">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOaprTagHeader1" style="font-weight: bold;">
+                   <a href="javascript:void(0)" id="link_1" onclick="openOaprFloat(1,979362,false);return false;">
+                     <font color="red">
+                       
+                     </font>
+                     
+                     【検定試験】BJTビジネス日本語能力テストの申込について（10/2締切）
+                   </a>
+                   </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOaprTagHeader2" style="font-weight: bold;">
+                    9/5 (金) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+                  <img src="./img/design01/ico_new.png" alt="NEW" class="icon">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOaprTagHeader2" style="font-weight: bold;">
+                   <a href="javascript:void(0)" id="link_2" onclick="openOaprFloat(2,979339,false);return false;">
+                     <font color="red">
+                       
+                     </font>
+                     
+                     履修相談会のご案内
+                   </a>
+                   </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOaprTagHeader3" style="font-weight: bold;">
+                    9/5 (金) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+                  <img src="./img/design01/ico_new.png" alt="NEW" class="icon">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOaprTagHeader3" style="font-weight: bold;">
+                   <a href="javascript:void(0)" id="link_3" onclick="openOaprFloat(3,979327,false);return false;">
+                     <font color="red">
+                       
+                     </font>
+                     
+                     【学外奨学金】福島県奨学資金の追加募集について
+                   </a>
+                   </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOaprTagHeader4" style="font-weight: bold;">
+                    9/5 (金) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+                  <img src="./img/design01/ico_new.png" alt="NEW" class="icon">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOaprTagHeader4" style="font-weight: bold;">
+                   <a href="javascript:void(0)" id="link_4" onclick="openOaprFloat(4,979314,false);return false;">
+                     <font color="red">
+                       
+                     </font>
+                     
+                       [重要]
+                     
+                     【再掲】令和8（2026）年度前期派遣 認定(SAP)留学　募集要項の掲載について
+                   </a>
+                   </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOaprTagHeader5" style="font-weight: bold;">
+                    9/4 (木) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOaprTagHeader5" style="font-weight: bold;">
+                   <a href="javascript:void(0)" id="link_5" onclick="openOaprFloat(5,979294,false);return false;">
+                     <font color="red">
+                       
+                     </font>
+                     
+                       [重要]
+                     
+                     台風15号に伴う、授業等のお知らせ
+                   </a>
+                   </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOaprTagHeader6" style="font-weight: bold;">
+                    9/4 (木) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOaprTagHeader6" style="font-weight: bold;">
+                   <a href="javascript:void(0)" id="link_6" onclick="openOaprFloat(6,979283,false);return false;">
+                     <font color="red">
+                       
+                     </font>
+                     
+                     Creating Happiness賞への推薦のお願い
+                   </a>
+                   </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOaprTagHeader7" style="font-weight: bold;">
+                    9/4 (木) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOaprTagHeader7" style="font-weight: bold;">
+                   <a href="javascript:void(0)" id="link_7" onclick="openOaprFloat(7,979277,false);return false;">
+                     <font color="red">
+                       
+                     </font>
+                     
+                     Creating Happiness賞への推薦のお願い
+                   </a>
+                   </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOaprTagHeader8" style="font-weight: bold;">
+                    9/4 (木) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOaprTagHeader8" style="font-weight: bold;">
+                   <a href="javascript:void(0)" id="link_8" onclick="openOaprFloat(8,979158,false);return false;">
+                     <font color="red">
+                       
+                     </font>
+                     
+                     【学友会執行部】摩耶祭講堂企画が今年度も開催決定！
+                   </a>
+                   </font>
+                
+                
+              </div>
+            </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyOaprTagHeader9" style="font-weight: bold;">
+                    9/3 (水) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkOaprTagHeader9" style="font-weight: bold;">
+                   <a href="javascript:void(0)" id="link_9" onclick="openOaprFloat(9,979152,false);return false;">
+                     <font color="red">
+                       
+                     </font>
+                     
+                     【検定試験】第116回中国語検定　申込受付について（9/26締切）
+                   </a>
+                   </font>
+                
+                
+              </div>
+            </div>
+          
+        
+      
+        <p class="view">
+          <a id="showAll" href="wbasoapr.do?contenam=wbasoapr&amp;buttonName=showAll"></a>
+        </p>
+</div>
+    <div class="separate_e" style="bottom: -28px;"></div>
+    
+    <div id="detailOaprDialog" style="display:none;">
+       <span id="resultOaprTableBody">
+       </span>
+    </div>
+    <div id="oaprCmtDialog" style="display: none">
+       
+
+
+
+
+
+
+
+<div class="contents_1">
+  <div class="caption">
+    <table style="margin:0px;padding:0px;width:100%">
+      <tbody><tr id="oaprLenErrMsgTagHeader" style="display:none;">
+        <td style="text-align:left;width:70%">
+          <span class="image" style="margin-top:0px;">
+          </span>
+          <span class="h4 line4" style="color:red" id="lenoparerrormsg">
+          </span>
+        </td>
+      </tr>
+      <tr id="oaprInvlidErrMsgTagHeader" style="display:none;">
+        <td style="text-align:left;width:70%">
+          <span class="image" style="margin-top:0px;">
+          </span>
+          <span class="h4 line4" style="color:red" id="invlidoparerrormsg">
+          </span>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+<div class="contents_1" style="margin:0px 0px 0px 18px;">
+  <textarea id="oaprMssgCmnt" rows="6" style="width:98%"></textarea>
+  <div style="text-align:left;">
+    &nbsp;&nbsp;(200文字以内で入力してください。)
+  </div>
+</div>
+<div class="contents_1">
+  <div class="function_bottom">
+    <table class="list" style="margin:0px 0px 0px 0px;width:100%">
+      <tbody><tr class="button">
+        <td style="background:none">
+          <div style="margin-left:160px;text-align:center">
+            <input type="button" id="commentDialog_close" value="閉じる" class="close decorate">
+          </div>
+        </td>
+        <td id="oaprCmtInsBtnTagHeader" style="background:none;display:none">
+          <div style="margin-right:-7px;text-align:right">
+            <input type="button" class="entry decorate" value="登録する" id="insertButton" onclick="updateOaprCmntData();">
+          </div>
+        </td>
+        <td id="oaprCmtUpdBtnTagHeader" style="background:none;display:none">
+          <div style="margin-right:-7px;text-align:right">
+            <input type="button" class="entry decorate" value="更新する" id="updateButton" onclick="updateOaprCmntData();">
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+
+    </div>
+    <input type="hidden" value="dummy" name="dummy" id="selectButtonName">
+    <input type="hidden" name="value(oaprCommentData)" value="" id="oaprCommentData">
+    <input type="hidden" name="value(oaprMessgId)" value="" id="oaprMessgId">
+  </form>
+</div>
+
+<script language="JavaScript" type="text/JavaScript" src="js/wbase/wbasoapr.js"></script>
+
+                </div>
+              
+                <div id="box_r0_c1_1" class="box_inner">
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  <!--
+    var wsyuoaprTimestamp = "1757169826193";
+    var wsyuoaprRequestURL = "wsyuoapr.do";
+    var taisyouYes = "1";
+    var wsyuoaprDesign = "design01";
+    var wsyuoaprDetailTitle = "メッセージ詳細";
+    var wsyuoaprCommentInsertButton = "コメントを登録する";
+    var wsyuoaprCommentEntryDay = "コメント登録日：";
+    var wsyuoaprUpdateCommentButton = "コメントを更新する";
+
+    // フロートオープン
+    function openWsyuOaprFloat(index, messgid) {
+      var requestURL = wsyuoaprRequestURL;
+      var param = {
+      'value(wsyuOaprMessgId)' : messgid,
+      'timestamp': wsyuoaprTimestamp,
+      'buttonName': 'showWsyuOaprFloat'
+      };
+      // 太文字 ＞ 細文字
+      document.getElementById('readDyWsyuOaprTagHeader'+index).style.fontWeight = "normal";
+      document.getElementById('readLinkWsyuOaprTagHeader'+index).style.fontWeight = "normal";
+      var scrollValues = new Array(document.documentElement.scrollLeft, document.documentElement.scrollTop);
+      ajaxRequest(requestURL, param, loadWsyuOaprDetail, "detailWsyuOaprDialog", scrollValues);
+    }
+
+    function loadWsyuOaprDetail(data) {
+      jq$("#resultWsyuOaprTableBody").empty().append(data);
+      openFloatDialog("#detailWsyuOaprDialog", '831px', wsyuoaprDetailTitle);
+    }
+
+    function openWsyuOaprCmntDialog(messgId , btnFlg) {
+      // エラーメッセージ取り消し
+      errorWsyuOaprHeaderNone();
+      // 登録、更新ボタン切り替え
+      if (btnFlg) {
+        document.getElementById('wsyuOaprCmtUpdBtnTagHeader').style.display = "block";
+        document.getElementById('wsyuOaprCmtInsBtnTagHeader').style.display = "none";
+      } else {
+        document.getElementById('wsyuOaprCmtUpdBtnTagHeader').style.display = "none";
+        document.getElementById('wsyuOaprCmtInsBtnTagHeader').style.display = "block";
+      }
+      $("wsyuOaprMessgId").value = messgId;
+    }
+
+    // コメントフロート項目変更（二回目以降）
+    function openWsyuOaprCmntDialogAfter(messgId , btnFlg) {
+      // エラーメッセージ取り消し
+      errorWsyuOaprHeaderNone();
+      // 登録、更新ボタン切り替え
+      if (document.getElementById('wsyuOaprMssgCmnt').value != "") {
+        document.getElementById('wsyuOaprCmtUpdBtnTagHeader').style.display = "block";
+        document.getElementById('wsyuOaprCmtInsBtnTagHeader').style.display = "none";
+      } else {
+        document.getElementById('wsyuOaprCmtUpdBtnTagHeader').style.display = "none";
+        document.getElementById('wsyuOaprCmtInsBtnTagHeader').style.display = "block";
+      }
+      $("wsyuOaprMessgId").value = messgId;
+    }
+
+    // コメント更新
+    function updateWsyuOaprCmntData(){
+      var requestURL = wsyuoaprRequestURL;
+      var param = {
+      'value(wsyuOaprCommentData)': document.getElementById('wsyuOaprMssgCmnt').value,
+      'value(wsyuOaprMessgId)' : document.getElementById('wsyuOaprMessgId').value ,
+      'timestamp': wsyuoaprTimestamp,
+      'buttonName': 'updateWsyuOaprFloat'
+      };
+      ajaxRequest(requestURL, param, loadWsyuOaprComment, "wsyuOaprCmtDialog");
+    }
+
+    function loadWsyuOaprComment(data) {
+      // エラーメッセージ取り消し
+      errorWsyuOaprHeaderNone();
+      // JSONデータ取得
+      try {
+          var response = eval("("+data+")");
+      } catch(e) {
+          jq$("#wsyuOaprCmtDialog").empty().append(data);
+          return;
+      }
+      var errFlg = response.dataMap.errorflg;
+      var mssgcmnt = response.dataMap.wsyuOaprMssgCmnt;
+      var cmmntdy = response.dataMap.wsyuOaprCmmntDy;
+      // コメントを閉じる後再表示用にHiddenに退避
+      $("wsyuOaprCommentData").value = mssgcmnt;
+      if (errFlg == true) {
+        // エラーの場合
+        var lenerr = response.dataMap.lengtherror;
+        if (lenerr != undefined) {
+          document.getElementById('wsyuOaprLenErrMsgTagHeader').style.display = "block";
+          document.getElementById('lenwsyuoparerrormsg').innerHTML = lenerr;
+        }
+        var invliderr = response.dataMap.invalidlenamchar;
+        if (invliderr != undefined) {
+          document.getElementById('wsyuOaprInvlidErrMsgTagHeader').style.display = "block";
+          document.getElementById('invlidwsyuoparerrormsg').innerHTML = invliderr
+        }
+      } else {
+        // 正常終了（詳細フロート書き換え）
+        jq$("#wsyuOaprCmtDialog").dialog('close');
+        if(mssgcmnt == ""){
+          $('resultCmntWsyuOaprTableBody').innerHTML = "<span class='function_bottom' >" +
+          "<input type='button' class='run decorate' name='detail' value='" +
+          wsyuoaprCommentInsertButton +
+          "' onclick='afterShowWsyuOaprCommentFloat();' />" +
+          "</span>";
+        } else {
+          // 特殊文字列のエスケープ処理
+          mssgcmnt = mssgcmnt.escapeHTML();
+          // 改行文字列の置換
+          mssgcmnt = mssgcmnt.replace(/\r\n/g, "<br>");
+          mssgcmnt = mssgcmnt.replace(/(\n|\r)/g, "<br>");
+          // 更新したコメントを再描画
+          $('resultCmntWsyuOaprTableBody').innerHTML = mssgcmnt +
+          "<br><font color='red'>" +
+          wsyuoaprCommentEntryDay +
+          cmmntdy +
+          "</font><br>" +
+          "<span class='function_bottom' >" +
+          "<input type='button' class='run decorate' name='detail' " +
+          "value='"+ wsyuoaprUpdateCommentButton +
+          "' onclick='afterShowWsyuOaprCommentFloat();' />" +
+          "</span>";
+        }
+        document.getElementById('wsyuOaprMssgCmnt').value = mssgcmnt;
+      }
+    }
+    function errorWsyuOaprHeaderNone(){
+      document.getElementById('wsyuOaprLenErrMsgTagHeader').style.display = "none";
+      document.getElementById('wsyuOaprInvlidErrMsgTagHeader').style.display = "none";
+    }
+  //-->
+</script>
+
+<div class="recruit_inf" id="wsyuoaprInf">
+  <form name="portletForm" id="wsyuoaprForm" method="post" action="/portal/wsyuoapr.do" style="position: static; zoom: 1;">
+    <input type="hidden" name="buttonName" value="">
+<input type="hidden" name="timestamp" value="1757169826193">
+<input type="hidden" name="contenam" value="wsyuoapr">
+
+
+    
+    <div class="separate_s">
+    </div>
+    <div class="title">
+      <table>
+        <tbody><tr>
+          <td style="text-indent:14px;">
+            <b>
+              就職・キャリアのお知らせ
+            </b>
+          </td>
+          <td>
+            <div style="text-align:right">
+              
+                <input type="button" class="wide" id="recruit_wide">
+              
+            </div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+
+    <div class="inner" id="WsyuOaprPortlet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      <div class="its_new">
+        <span class="style">
+          0
+          件
+        </span>
+        の新着
+        <span class="image">
+        </span>
+      </div>
+      
+      
+        
+        
+          <div class="clear">
+          </div>
+          
+            <div class="details">
+              <div class="date">
+                
+                  <font id="readDyWsyuOaprTagHeader0" style="font-weight: bold;">
+                    7/1 (火) 
+                  </font>
+                
+                
+              </div>
+              <div class="icons_2">
+                
+              </div>
+              <div class="text">
+                
+                  <font id="readLinkWsyuOaprTagHeader0" style="font-weight: bold;">
+                   <a href="javascript:void(0)" id="link_0" onclick="openWsyuOaprFloat(0,970710,false);return false;">
+                     <font color="red">
+                       
+                     </font>
+                     
+                       [重要]
+                     
+                     在学生専用Ｗｅｂページ「MUC（ムック）」新ID・パスワードのお知らせ
+                   </a>
+                   </font>
+                
+                
+              </div>
+            </div>
+          
+        
+      
+      <p class="view">
+        <a id="showListFromSyusyPortlet" href="wsyuoapr.do?contenam=wsyuoapr&amp;buttonName=showListFromSyusyPortlet"></a>
+      </p>
+
+</div>
+    <div class="separate_e" style="bottom: 0px;"></div>
+    
+    <div id="detailWsyuOaprDialog" style="display:none;">
+       <span id="resultWsyuOaprTableBody">
+       </span>
+    </div>
+    <div id="wsyuOaprCmtDialog" style="display: none">
+       
+
+
+
+
+
+
+
+<div class="contents_1">
+  <div class="caption">
+    <table style="margin:0px;padding:0px;width:100%">
+      <tbody><tr id="wsyuOaprLenErrMsgTagHeader" style="display:none;">
+        <td style="text-align:left;width:70%">
+          <span class="image" style="margin-top:0px;">
+          </span>
+          <span class="h4 line4" style="color:red" id="lenwsyuoparerrormsg">
+          </span>
+        </td>
+      </tr>
+      <tr id="wsyuOaprInvlidErrMsgTagHeader" style="display:none;">
+        <td style="text-align:left;width:70%">
+          <span class="image" style="margin-top:0px;">
+          </span>
+          <span class="h4 line4" style="color:red" id="invlidwsyuoparerrormsg">
+          </span>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+<div class="contents_1" style="margin:0px 0px 0px 18px;">
+  <textarea id="wsyuOaprMssgCmnt" rows="6" style="width:98%"></textarea>
+  <div style="text-align:left;">
+    &nbsp;&nbsp;(200文字以内で入力してください。)
+  </div>
+</div>
+<div class="contents_1">
+  <div class="function_bottom">
+    <table class="list" style="margin:0px 0px 0px 0px;width:100%">
+      <tbody><tr class="button">
+        <td style="background:none">
+          <div style="margin-left:160px;text-align:center">
+            <input type="button" id="commentDialog_close" value="閉じる" class="close decorate">
+          </div>
+        </td>
+        <td id="wsyuOaprCmtInsBtnTagHeader" style="background:none;display:none">
+          <div style="margin-right:-7px;text-align:right">
+            <input type="button" class="entry decorate" value="登録する" id="insertButton" onclick="updateWsyuOaprCmntData();">
+          </div>
+        </td>
+        <td id="wsyuOaprCmtUpdBtnTagHeader" style="background:none;display:none">
+          <div style="margin-right:-7px;text-align:right">
+            <input type="button" class="entry decorate" value="更新する" id="updateButton" onclick="updateWsyuOaprCmntData();">
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+    </div>
+    <input type="hidden" value="dummy" name="dummy" id="selectButtonName">
+    <input type="hidden" name="value(wsyuOaprCommentData)" value="" id="wsyuOaprCommentData">
+    <input type="hidden" name="value(wsyuOaprMessgId)" value="" id="wsyuOaprMessgId">
+  </form>
+</div>
+
+<script language="JavaScript" type="text/JavaScript" src="js/syusy/wsyuoapr.js"></script>
+
+                </div>
+              
+            </div>
+          
+        
+          
+        
+      </div>
+      <br class="clear">
+      
+    
+  
+
+</td>
+
+<script type="text/javascript">
+<!--
+jq$(function() {
+  
+  if ($('wbassdwrForm')) {
+    delayedSearchWeeklySchedule();
+  }
+});
+//-->
+</script>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td id="sub1" style="height: 912px;">
+  <div id="navigation">
+   
+    
+    <div id="login_inf">
+      <div class="top"></div>
+      <div class="mid">
+      
+        <ul class="date">
+          <li class="label"></li>
+          <li class="item">
+            
+            2025年9月6日
+            
+          </li>
+          <li class="item">
+            
+            23時27分
+            
+          </li>
+        </ul>
+        <ul class="user">
+          <li class="label"></li>
+        
+          <li class="item">橘　由翔</li>
+        
+        </ul>
+
+      </div>
+      <div class="under"></div>
+    </div>
+   
+   
+
+  
+  
+    <div id="side_menu">
+      <div class="top"></div>
+        <div id="slide">
+          <input type="button" class="button">
+        </div>
+      <div class="mid" id="sideMenuMiddle">
+        
+          
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+    <li class="label">お知らせの検索</li>
+    
+      
+      
+      
+      
+        
+        
+        
+        
+            <li class="item">
+              <a title="受信メッセージ検索" href="
+                wbasmgjr.do?clearAccessData=true&amp;contenam=wbasmgjr&amp;kjnmnNo=154
+                ">受信メッセージ検索
+              </a>
+            </li>
+        
+      
+    
+      
+      
+      
+      
+        
+        
+        
+        
+            <li class="item">
+              <a title="講義情報検索" href="
+                prtlkkir.do?clearAccessData=true&amp;contenam=prtlkkir&amp;kjnmnNo=159
+                ">講義情報検索
+              </a>
+            </li>
+        
+      
+    
+  </ul>
+
+        
+          
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+    <li class="label">トップページ</li>
+    
+      
+      
+      
+      
+        
+        
+        
+        
+            <li class="item">
+              <a title="インフォメーション一覧" href="
+                wbaskosr.do?clearAccessData=true&amp;contenam=wbaskosr&amp;kjnmnNo=119
+                ">インフォメーション一覧
+              </a>
+            </li>
+        
+      
+    
+      
+      
+      
+      
+        
+        
+        
+        
+            <li class="item">
+              <a title="イベント" href="
+                wbasevtr.do?clearAccessData=true&amp;contenam=wbasevtr&amp;kjnmnNo=137
+                ">イベント
+              </a>
+            </li>
+        
+      
+    
+  </ul>
+
+        
+          
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+    <li class="label">リンク</li>
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fwww.musashino-u.ac.jp%2f" target="_blank" title="武蔵野大学">武蔵野大学
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fwww.musashino-u.ed.jp%2f" target="_blank" title="武蔵野大学中学校・高等学校">武蔵野大学中学校・高等学校
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fchiyoda.ed.jp%2f" target="_blank" title="千代田中学校・高等学校">千代田中学校・高等学校
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fkg.musashino-u.ac.jp%2f" target="_blank" title="武蔵野大学附属幼稚園">武蔵野大学附属幼稚園
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fak.musashino-u.ac.jp%2f" target="_blank" title="武蔵野大学附属有明こども園">武蔵野大学附属有明こども園
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=http%3a%2f%2fmubs.jp%2f" target="_blank" title="株式会社エムユービジネスサポート">株式会社エムユービジネスサポート
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fopac.musashino-u.ac.jp%2f" target="_blank" title="武蔵野大学図書館">武蔵野大学図書館
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+  </ul>
+
+        
+        
+        
+      </div>
+      <div class="under"></div>
+    </div>
+  
+  </div>
+  <div id="dummy"></div>
+  <br class="clear">
+</td>
+
+    </tr>
+  </tbody></table>
+</div>
+
+<p id="pageTopButton" style="display: none;">
+  <a href="#wrap" id="pageTopLink">PAGE TOP</a>
+</p>
+
+
+
+
+
+<script type="text/javascript">
+
+jQuery(function(){
+  target = document.getElementById("copyright");
+  target.innerHTML = "Copyright FUJITSU LIMITED 2005-" + new Date().getFullYear();
+});
+
+</script>
+
+  <noscript><c:out value="JavaScriptを使用できる環境でご利用ください。" /></noscript>
+  <div id="footer">
+    <div class="text" id="copyright">Copyright FUJITSU LIMITED 2005-2025</div>
+
+</div>
+
+
+
+</div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div><div class="time-picker" style="margin-top: 1.5em; top: 0px; left: 0px; display: none;"><ul><li>00:00</li><li>00:30</li><li>01:00</li><li>01:30</li><li>02:00</li><li>02:30</li><li>03:00</li><li>03:30</li><li>04:00</li><li>04:30</li><li>05:00</li><li>05:30</li><li>06:00</li><li>06:30</li><li>07:00</li><li>07:30</li><li>08:00</li><li>08:30</li><li>09:00</li><li>09:30</li><li>10:00</li><li>10:30</li><li>11:00</li><li>11:30</li><li>12:00</li><li>12:30</li><li>13:00</li><li>13:30</li><li>14:00</li><li>14:30</li><li>15:00</li><li>15:30</li><li>16:00</li><li>16:30</li><li>17:00</li><li>17:30</li><li>18:00</li><li>18:30</li><li>19:00</li><li>19:30</li><li>20:00</li><li>20:30</li><li>21:00</li><li>21:30</li><li>22:00</li><li>22:30</li><li>23:00</li><li>23:30</li></ul></div><div class="time-picker" style="margin-top: 1.5em; top: 0px; left: 0px; display: none;"><ul><li>00:00</li><li>00:30</li><li>01:00</li><li>01:30</li><li>02:00</li><li>02:30</li><li>03:00</li><li>03:30</li><li>04:00</li><li>04:30</li><li>05:00</li><li>05:30</li><li>06:00</li><li>06:30</li><li>07:00</li><li>07:30</li><li>08:00</li><li>08:30</li><li>09:00</li><li>09:30</li><li>10:00</li><li>10:30</li><li>11:00</li><li>11:30</li><li>12:00</li><li>12:30</li><li>13:00</li><li>13:30</li><li>14:00</li><li>14:30</li><li>15:00</li><li>15:30</li><li>16:00</li><li>16:30</li><li>17:00</li><li>17:30</li><li>18:00</li><li>18:30</li><li>19:00</li><li>19:30</li><li>20:00</li><li>20:30</li><li>21:00</li><li>21:30</li><li>22:00</li><li>22:30</li><li>23:00</li><li>23:30</li></ul></div><div class="time-picker" style="margin-top: 1.5em; top: 0px; left: 0px; display: none;"><ul><li>00:00</li><li>00:30</li><li>01:00</li><li>01:30</li><li>02:00</li><li>02:30</li><li>03:00</li><li>03:30</li><li>04:00</li><li>04:30</li><li>05:00</li><li>05:30</li><li>06:00</li><li>06:30</li><li>07:00</li><li>07:30</li><li>08:00</li><li>08:30</li><li>09:00</li><li>09:30</li><li>10:00</li><li>10:30</li><li>11:00</li><li>11:30</li><li>12:00</li><li>12:30</li><li>13:00</li><li>13:30</li><li>14:00</li><li>14:30</li><li>15:00</li><li>15:30</li><li>16:00</li><li>16:30</li><li>17:00</li><li>17:30</li><li>18:00</li><li>18:30</li><li>19:00</li><li>19:30</li><li>20:00</li><li>20:30</li><li>21:00</li><li>21:30</li><li>22:00</li><li>22:30</li><li>23:00</li><li>23:30</li></ul></div><div class="time-picker" style="margin-top: 1.5em; top: 0px; left: 0px; display: none;"><ul><li>00:00</li><li>00:30</li><li>01:00</li><li>01:30</li><li>02:00</li><li>02:30</li><li>03:00</li><li>03:30</li><li>04:00</li><li>04:30</li><li>05:00</li><li>05:30</li><li>06:00</li><li>06:30</li><li>07:00</li><li>07:30</li><li>08:00</li><li>08:30</li><li>09:00</li><li>09:30</li><li>10:00</li><li>10:30</li><li>11:00</li><li>11:30</li><li>12:00</li><li>12:30</li><li>13:00</li><li>13:30</li><li>14:00</li><li>14:30</li><li>15:00</li><li>15:30</li><li>16:00</li><li>16:30</li><li>17:00</li><li>17:30</li><li>18:00</li><li>18:30</li><li>19:00</li><li>19:30</li><li>20:00</li><li>20:30</li><li>21:00</li><li>21:30</li><li>22:00</li><li>22:30</li><li>23:00</li><li>23:30</li></ul></div><div class="time-picker" style="margin-top: 1.5em; top: 0px; left: 0px; display: none;"><ul><li>00:00</li><li>00:30</li><li>01:00</li><li>01:30</li><li>02:00</li><li>02:30</li><li>03:00</li><li>03:30</li><li>04:00</li><li>04:30</li><li>05:00</li><li>05:30</li><li>06:00</li><li>06:30</li><li>07:00</li><li>07:30</li><li>08:00</li><li>08:30</li><li>09:00</li><li>09:30</li><li>10:00</li><li>10:30</li><li>11:00</li><li>11:30</li><li>12:00</li><li>12:30</li><li>13:00</li><li>13:30</li><li>14:00</li><li>14:30</li><li>15:00</li><li>15:30</li><li>16:00</li><li>16:30</li><li>17:00</li><li>17:30</li><li>18:00</li><li>18:30</li><li>19:00</li><li>19:30</li><li>20:00</li><li>20:30</li><li>21:00</li><li>21:30</li><li>22:00</li><li>22:30</li><li>23:00</li><li>23:30</li></ul></div></body></html>

@@ -1,0 +1,669 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="ja">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="format-detection" content="telephone=no">
+    <title>
+    
+    
+      武蔵野大学 MUSCAT
+    
+    </title>
+
+
+    <script>
+      var waitingMessage = "お待ちください...";
+      var showBlockAlartMessage = "処理中です。しばらくお待ちください。";
+      var ajaxRequestError = "エラーが発生しました";
+      var addListenerError = "お使いのブラウザは対応していません。";
+      var noFoundResourceError = "存在しないファイルが指定されています。指定し直して下さい。";
+    </script>
+
+    <link rel="stylesheet" href="./css/timepicker.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./css/jquery.ui.css" type="text/css" charset="utf-8"> 
+    <link rel="stylesheet" href="./css/design01/common.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="./css/design01/theme.css" type="text/css" media="screen" charset="utf-8">
+    <!--<link rel="stylesheet" href="./css/design01/common_en.css" type="text/css" media="screen" charset="utf-8" />-->
+    <!--<link rel="stylesheet" href="./css/design01/theme_en.css" type="text/css" media="screen" charset="utf-8" />-->
+    <link rel="stylesheet" href="./css/design01/common_print.css" type="text/css" media="print" charset="utf-8">
+    <link rel="stylesheet" href="./css/design01/theme_print.css" type="text/css" media="print" charset="utf-8">
+    <!--<link rel="stylesheet" href="./css/design01/theme_print_en.css" type="text/css" media="print" charset="utf-8" />-->
+    <link rel="shortcut icon" href="./img/design01/favicon.ico">
+
+    <script language="JavaScript" type="text/JavaScript" src="./js/prototype.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/effects.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/main.js"></script>
+<!--[if IE]>
+    
+    <script language="JavaScript" type="text/JavaScript" src="./js/excanvas.js"></script>
+<![endif]-->
+
+    <script language="JavaScript" type="text/JavaScript" src="./js/jquery.js"></script>
+    <script type="text/javascript">jQuery.noConflict();var jq$ = jQuery;</script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/jquery.ui.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/date.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/design01/common.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/design01/theme.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/jquery.ui.datepicker-ja.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/jquery.timePicker.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/jquery.blockUI.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="./js/main_jq.js"></script>
+    <script language="javascript" type="text/javascript">
+    <!--
+      restoreScreenState('', '', '');
+      
+      
+    //-->
+    </script>
+
+  </head>
+
+<body>
+<div id="container">
+<div id="header">
+  
+  
+  <div id="head_top"></div>
+  <div id="head_left"></div>
+  <div id="head_right">
+    <div class="button">
+      
+      <input name="f_large" type="button" id="f_large">
+      <input name="f_middle" type="button" id="f_middle">
+      <input name="f_small" type="button" id="f_small">
+      
+        <span id="help_space"> </span>
+        <span id="logout_space"> </span>
+        
+      
+      
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div id="head_base"></div>
+  
+  <div id="top_menu">
+    <ul id="nav">
+
+      
+      
+        <li class="menu_end">
+        </li>
+      
+
+    </ul>
+    <br class="clear">
+  </div>
+</div>
+
+<div id="content">
+  <div id="login_inf_print">
+  <div class="top"></div>
+  <div class="mid">
+    
+    <ul class="user">
+    </ul>
+  
+  </div>
+  <div class="under"></div>
+</div><table cellpadding="0" cellspacing="0" summary="layout">
+    <tbody><tr>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+
+
+
+
+
+
+
+<td id="main" style="font-size: 1em;">
+  
+    
+    <div id="title">
+      <h2>
+        エラー
+      </h2>
+    </div>
+    
+  
+
+
+
+
+
+
+  <div class="caption" style="line-height:2em">
+    
+
+
+
+
+
+    
+      
+        <span class="image"></span><span class="h4 line4" style="color:red">予期せぬエラーが発生しました。操作をやり直してください。</span>
+        <br>
+      
+    
+    
+
+  </div>
+
+</td>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td id="sub1" style="height: 797px;">
+  <div id="navigation">
+   
+   
+      
+      
+        
+          
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="JavaScript" type="text/JavaScript" src="js/login/login.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="js/jquery.qtip.js"></script>
+<script language="JavaScript">
+<!--
+  function submitLoginForm(act){
+    document.loginForm.action = act;
+    document.loginForm.submit();
+  }
+
+
+  jq$(function() {
+
+    jq$('#loginArea').qtip({
+       content: {
+         text: jq$('#loginErrorMsg'),
+         title: {
+           text: 'エラー',
+           button: '×'
+         }
+       },
+       position: { 
+         corner: { target: 'leftMiddle', tooltip: 'rightTop'}
+       },
+       style: {
+         width: '300px',
+         name : 'blue',
+         tip: true
+       },
+       show: { when: false, ready: false } ,
+       hide: { when: false, fixed: true }
+     });
+
+
+    jq$(window).load(function () { 
+      var errorMsg = jq$.trim($('loginErrorMsg').innerHTML);
+      if (errorMsg != "") {
+        jq$('#loginArea').qtip("show");
+      }
+    });
+  });
+//-->
+</script>
+
+    <div id="login_inf">
+      <div class="top"></div>
+      <div class="mid" id="loginArea">
+
+        <form name="loginForm" method="post" action="/portal/login.do">
+          <input type="hidden" name="buttonName" value="">
+          <div style="text-align:center;margin-top:-10px;">
+            
+              <input type="radio" name="lang" style="width:12px;height:12px" value="1" id="jpn" onclick="javascript:submitLoginForm('login.do')" checked="">
+              <label for="jpn">Japanese</label>
+              <input type="radio" name="lang" style="width:12px;height:12px" value="2" id="eng" onclick="javascript:submitLoginForm('login.do')">
+              <label for="eng">English</label>
+            
+            
+          </div>
+          
+          <ul class="user">
+            <li class="label_input"><label for="userId">ユーザID</label></li>
+            <li class="item"><input type="text" name="userId" maxlength="20" value="" id="userId" class="input"></li>
+            <li class="label_input"><label for="password">パスワード</label></li>
+            <li class="item"><input type="password" name="password" maxlength="999" value="" id="password" class="input" autocomplete="off"></li>
+          </ul>
+          <div style="width:90%;text-align:center;padding-top:5px;">
+            <input type="button" id="loginButton" onclick="return exec('login',this,null)" value="ログイン" class="decorate">
+          </div>
+        </form>
+
+      </div>
+      <div class="under"></div>
+    </div>
+
+    
+    <div style="display:none">
+      <div class="caption" id="loginErrorMsg" style="margin-top: 0px;">
+        
+        
+      </div>
+    </div>
+      
+   
+
+  
+  
+    <div id="side_menu">
+      <div class="top"></div>
+        <div id="slide">
+          <input type="button" class="button">
+        </div>
+      <div class="mid" id="sideMenuMiddle">
+        
+          
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+    <li class="label">トップページ</li>
+    
+      
+      
+      
+      
+        
+        
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fmuscat.musashino-u.ac.jp%2fportal%2ftop.do
+              " title="MUSCAT ログイン">MUSCAT ログイン
+            </a>
+          </li>
+          
+          
+        
+        
+        
+      
+    
+      
+      
+      
+      
+        
+        
+        
+        
+            <li class="item">
+              <a title="インフォメーション" href="
+                wbaskosr.do?clearAccessData=true&amp;contenam=wbaskosr&amp;kjnmnNo=3
+                ">インフォメーション
+              </a>
+            </li>
+        
+      
+    
+      
+      
+      
+      
+        
+        
+        
+        
+            <li class="item">
+              <a title="イベント" href="
+                wbasevtr.do?clearAccessData=true&amp;contenam=wbasevtr&amp;kjnmnNo=4
+                ">イベント
+              </a>
+            </li>
+        
+      
+    
+  </ul>
+
+        
+          
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+    <li class="label">履修要覧</li>
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fwww.musashino-u.ac.jp%2fstudent-life%2flearning%2fcourse.html" target="_blank" title="履修要覧">履修要覧
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+  </ul>
+
+        
+          
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+    <li class="label">シラバス</li>
+    
+      
+      
+      
+      
+        
+        
+        
+        
+            <li class="item">
+              <a title="シラバス" href="
+                slbssrch.do?clearAccessData=true&amp;contenam=slbssrch&amp;kjnmnNo=10
+                ">シラバス
+              </a>
+            </li>
+        
+      
+    
+  </ul>
+
+        
+          
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+    <li class="label">教員情報</li>
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fwww-cv01.ufinity.jp%2fmusashino%2f" target="_blank" title="教員情報">教員情報
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+  </ul>
+
+        
+          
+            
+          
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+    <li class="label">リンク</li>
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fwww.musashino-u.ac.jp%2f" target="_blank" title="武蔵野大学">武蔵野大学
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fwww.musashino-u.ed.jp%2f" target="_blank" title="武蔵野大学中学校・高等学校">武蔵野大学中学校・高等学校
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fchiyoda.ed.jp%2f" target="_blank" title="千代田中学校・高等学校">千代田中学校・高等学校
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fkg.musashino-u.ac.jp%2f" target="_blank" title="武蔵野大学附属幼稚園">武蔵野大学附属幼稚園
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=https%3a%2f%2fak.musashino-u.ac.jp%2f" target="_blank" title="武蔵野大学附属有明こども園">武蔵野大学附属有明こども園
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+      
+      
+      
+      
+        
+        
+          
+          
+          <li class="item">
+            <a href="
+              /portal/linkmenuforward.do?linkUrl=http%3a%2f%2fmubs.jp%2f" target="_blank" title="株式会社エムユービジネスサポート">株式会社エムユービジネスサポート
+            </a>
+          </li>
+          
+        
+        
+        
+      
+    
+  </ul>
+
+        
+        
+        
+      </div>
+      <div class="under"></div>
+    </div>
+  
+  </div>
+  <div id="dummy"></div>
+  <br class="clear">
+</td>
+
+    </tr>
+  </tbody></table>
+</div>
+
+<p id="pageTopButton" style="display: none;">
+  <a href="#wrap" id="pageTopLink">PAGE TOP</a>
+</p>
+
+
+
+
+
+<script type="text/javascript">
+
+jQuery(function(){
+  target = document.getElementById("copyright");
+  target.innerHTML = "Copyright FUJITSU LIMITED 2005-" + new Date().getFullYear();
+});
+
+</script>
+
+  <noscript><c:out value="JavaScriptを使用できる環境でご利用ください。" /></noscript>
+  <div id="footer">
+    <div class="text" id="copyright">Copyright FUJITSU LIMITED 2005-2025</div>
+
+</div>
+
+
+
+</div><div qtip="0" class="qtip qtip-blue" style="border-radius: 0px; position: absolute; padding: 0px 14px 0px 0px; width: 84px; display: none; top: 159px; left: 686px;"><div class="qtip-tip" dir="ltr" rel="rightTop" style="position: absolute; height: 14px; width: 14px; margin: 0px auto; line-height: 0.1px; font-size: 1px; right: 0px; top: 0px; display: block;"><canvas height="14" width="14"></canvas></div>  <div class="qtip-wrapper" style="position:relative; overflow:hidden; text-align:left;">    <div class="qtip-contentWrapper" style="overflow: hidden; background: rgb(229, 246, 254); border: 3px solid rgb(173, 217, 237);"><div class="qtip-title" style="background: rgb(208, 233, 245); font-weight: bold; padding: 7px 12px; color: rgb(94, 153, 189); zoom: 0;"><a class="qtip-button" style="float: right; position: relative; cursor: pointer; display: block;">×</a>エラー</div>       <div class="qtip-content qtip-content" style="background: rgb(229, 246, 254); color: rgb(77, 159, 191); overflow: hidden; text-align: left; padding: 5px 9px;"><div class="caption" id="loginErrorMsg" style="margin-top: 0px;">
+        
+        
+      </div></div></div></div></div></body></html>
