@@ -69,11 +69,6 @@ def scrape(stu_id:str, password:str) -> list:
     print("時間割データを抽出中...")
     jikanwari = []
     
-    # 現在のページHTMLを保存（デバッグ用）
-    with open("/Users/tachibananoyushou/Calendar-Generator/current_timetable_debug.html", "w", encoding="utf-8") as f:
-        f.write(driver.page_source)
-    print("現在のページHTMLを保存: current_timetable_debug.html")
-    
     # 各学期のデータを取得（1-4学期）
     semester_urls = [
         "?buttonName=switchJikanwariKikan&kikankn=1",  # 1学期
